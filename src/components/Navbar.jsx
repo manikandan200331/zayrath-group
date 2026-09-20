@@ -52,19 +52,19 @@ export default function Navbar({ activeView, setActiveView, onOpenRfq, rfqCount 
         zIndex: 1000,
         transition: 'all 0.35s ease',
         background: isScrolled 
-          ? 'rgba(7, 9, 13, 0.94)' 
-          : 'linear-gradient(180deg, rgba(6, 7, 9, 0.95) 0%, rgba(6, 7, 9, 0.6) 70%, transparent 100%)',
-        backdropFilter: isScrolled ? 'blur(16px)' : 'blur(8px)',
-        borderBottom: isScrolled ? '1px solid rgba(212, 175, 55, 0.22)' : '1px solid rgba(212, 175, 55, 0.08)',
-        boxShadow: isScrolled ? '0 10px 30px rgba(0, 0, 0, 0.6)' : 'none'
+          ? 'rgba(255, 255, 255, 0.95)' 
+          : 'rgba(255, 255, 255, 0.9)',
+        backdropFilter: 'blur(16px)',
+        borderBottom: '1px solid rgba(184, 134, 11, 0.25)',
+        boxShadow: isScrolled ? '0 8px 30px rgba(15, 23, 42, 0.08)' : 'none'
       }}
     >
       {/* Top Corporate Ticker Bar */}
       <div 
         className="top-corporate-ticker"
         style={{
-          borderBottom: '1px solid rgba(212, 175, 55, 0.12)',
-          background: 'rgba(10, 13, 19, 0.8)',
+          borderBottom: '1px solid rgba(15, 23, 42, 0.08)',
+          background: '#F8FAFC',
           fontSize: '0.75rem',
           padding: '0.35rem 0',
           color: 'var(--text-secondary)'
@@ -108,9 +108,9 @@ export default function Navbar({ activeView, setActiveView, onOpenRfq, rfqCount 
               height: '52px',
               borderRadius: '10px',
               overflow: 'hidden',
-              border: '1px solid rgba(212, 175, 55, 0.4)',
-              boxShadow: '0 0 15px rgba(212, 175, 55, 0.25)',
-              background: '#090B0F'
+              border: '1.5px solid rgba(184, 134, 11, 0.35)',
+              boxShadow: '0 2px 10px rgba(184, 134, 11, 0.2)',
+              background: '#FFFFFF'
             }}
           >
             <img 
@@ -136,9 +136,9 @@ export default function Navbar({ activeView, setActiveView, onOpenRfq, rfqCount 
             <div style={{ 
               fontFamily: 'var(--font-heading)', 
               fontSize: '0.68rem', 
-              fontWeight: 700, 
+              fontWeight: 800, 
               letterSpacing: '0.35em', 
-              color: 'var(--gold-light)',
+              color: 'var(--text-gold)',
               textTransform: 'uppercase'
             }}>
               G R O U P
@@ -153,10 +153,10 @@ export default function Navbar({ activeView, setActiveView, onOpenRfq, rfqCount 
             style={{
               background: 'none',
               border: 'none',
-              color: activeView === 'group' ? 'var(--gold-light)' : 'var(--text-primary)',
+              color: activeView === 'group' ? 'var(--text-gold)' : 'var(--text-primary)',
               fontFamily: 'var(--font-heading)',
               fontSize: '0.92rem',
-              fontWeight: activeView === 'group' ? 700 : 500,
+              fontWeight: activeView === 'group' ? 800 : 600,
               cursor: 'pointer',
               display: 'flex',
               alignItems: 'center',
@@ -166,7 +166,7 @@ export default function Navbar({ activeView, setActiveView, onOpenRfq, rfqCount 
               transition: 'all 0.2s ease'
             }}
           >
-            <Building2 size={16} style={{ color: activeView === 'group' ? 'var(--gold-primary)' : '#888' }} />
+            <Building2 size={16} style={{ color: activeView === 'group' ? 'var(--gold-primary)' : 'var(--text-muted)' }} />
             Group Home
           </button>
 
@@ -179,10 +179,10 @@ export default function Navbar({ activeView, setActiveView, onOpenRfq, rfqCount 
             <button
               onClick={() => setIsCompaniesOpen(!isCompaniesOpen)}
               style={{
-                background: (activeView === 'hardware' || activeView === 'software') ? 'rgba(212, 175, 55, 0.12)' : 'none',
-                border: (activeView === 'hardware' || activeView === 'software') ? '1px solid rgba(212, 175, 55, 0.3)' : '1px solid transparent',
+                background: (activeView === 'hardware' || activeView === 'software') ? 'rgba(184, 134, 11, 0.1)' : 'none',
+                border: (activeView === 'hardware' || activeView === 'software') ? '1px solid rgba(184, 134, 11, 0.3)' : '1px solid transparent',
                 borderRadius: '6px',
-                color: (activeView === 'hardware' || activeView === 'software') ? 'var(--gold-light)' : 'var(--text-primary)',
+                color: (activeView === 'hardware' || activeView === 'software') ? 'var(--text-gold)' : 'var(--text-primary)',
                 fontFamily: 'var(--font-heading)',
                 fontSize: '0.92rem',
                 fontWeight: 600,
@@ -206,12 +206,12 @@ export default function Navbar({ activeView, setActiveView, onOpenRfq, rfqCount 
                   top: '100%',
                   left: '-15px',
                   width: '320px',
-                  background: 'rgba(11, 14, 20, 0.97)',
-                  border: '1px solid rgba(212, 175, 55, 0.3)',
+                  background: 'rgba(255, 255, 255, 0.98)',
+                  border: '1px solid rgba(184, 134, 11, 0.35)',
                   backdropFilter: 'blur(20px)',
                   borderRadius: '12px',
                   padding: '0.75rem',
-                  boxShadow: '0 16px 40px rgba(0,0,0,0.85), 0 0 25px rgba(212, 175, 55, 0.15)',
+                  boxShadow: '0 16px 40px rgba(15, 23, 42, 0.12), 0 0 25px rgba(184, 134, 11, 0.1)',
                   zIndex: 1100,
                   animation: 'fadeIn 0.2s ease'
                 }}
@@ -241,7 +241,7 @@ export default function Navbar({ activeView, setActiveView, onOpenRfq, rfqCount 
                     <Server size={20} />
                   </div>
                   <div>
-                    <div style={{ fontWeight: 700, color: '#FFF', fontSize: '0.92rem' }}>Zayrath Tech Systems</div>
+                    <div style={{ fontWeight: 700, color: '#0F172A', fontSize: '0.92rem' }}>Zayrath Tech Systems</div>
                     <div style={{ fontSize: '0.78rem', color: 'var(--text-secondary)', marginTop: '2px' }}>
                       IT Products & Servers (Dedicated Page →)
                     </div>
@@ -270,7 +270,7 @@ export default function Navbar({ activeView, setActiveView, onOpenRfq, rfqCount 
                     <Code2 size={20} />
                   </div>
                   <div>
-                    <div style={{ fontWeight: 700, color: '#FFF', fontSize: '0.92rem' }}>Zayrath Software Solutions</div>
+                    <div style={{ fontWeight: 700, color: '#0F172A', fontSize: '0.92rem' }}>Zayrath Software Solutions</div>
                     <div style={{ fontSize: '0.78rem', color: 'var(--text-secondary)', marginTop: '2px' }}>
                       Custom Software & AI (Dedicated Page →)
                     </div>
@@ -285,10 +285,10 @@ export default function Navbar({ activeView, setActiveView, onOpenRfq, rfqCount 
             style={{
               background: 'none',
               border: 'none',
-              color: activeView === 'hardware' ? 'var(--gold-light)' : 'var(--text-primary)',
+              color: activeView === 'hardware' ? 'var(--text-gold)' : 'var(--text-primary)',
               fontFamily: 'var(--font-heading)',
               fontSize: '0.92rem',
-              fontWeight: activeView === 'hardware' ? 700 : 500,
+              fontWeight: activeView === 'hardware' ? 800 : 600,
               cursor: 'pointer',
               display: 'flex',
               alignItems: 'center',
@@ -307,10 +307,10 @@ export default function Navbar({ activeView, setActiveView, onOpenRfq, rfqCount 
             style={{
               background: 'none',
               border: 'none',
-              color: activeView === 'software' ? 'var(--gold-light)' : 'var(--text-primary)',
+              color: activeView === 'software' ? 'var(--text-gold)' : 'var(--text-primary)',
               fontFamily: 'var(--font-heading)',
               fontSize: '0.92rem',
-              fontWeight: activeView === 'software' ? 700 : 500,
+              fontWeight: activeView === 'software' ? 800 : 600,
               cursor: 'pointer',
               display: 'flex',
               alignItems: 'center',
@@ -332,11 +332,11 @@ export default function Navbar({ activeView, setActiveView, onOpenRfq, rfqCount 
               color: 'var(--text-secondary)',
               fontFamily: 'var(--font-heading)',
               fontSize: '0.92rem',
-              fontWeight: 500,
+              fontWeight: 600,
               cursor: 'pointer',
               transition: 'color 0.2s ease'
             }}
-            onMouseEnter={(e) => e.currentTarget.style.color = 'var(--gold-light)'}
+            onMouseEnter={(e) => e.currentTarget.style.color = 'var(--text-gold)'}
             onMouseLeave={(e) => e.currentTarget.style.color = 'var(--text-secondary)'}
           >
             Vision & Leadership
@@ -358,8 +358,8 @@ export default function Navbar({ activeView, setActiveView, onOpenRfq, rfqCount 
             {rfqCount > 0 && (
               <span 
                 style={{
-                  background: '#0B0D11',
-                  color: 'var(--gold-light)',
+                  background: '#FFFFFF',
+                  color: 'var(--text-gold)',
                   borderRadius: '999px',
                   padding: '0.1rem 0.45rem',
                   fontSize: '0.72rem',
@@ -377,12 +377,13 @@ export default function Navbar({ activeView, setActiveView, onOpenRfq, rfqCount 
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             style={{
               display: 'none',
-              background: 'rgba(212, 175, 55, 0.1)',
-              border: '1px solid rgba(212, 175, 55, 0.3)',
+              background: '#FFFFFF',
+              border: '1px solid rgba(184, 134, 11, 0.3)',
               borderRadius: '8px',
-              color: 'var(--gold-light)',
+              color: 'var(--text-gold)',
               padding: '0.6rem',
-              cursor: 'pointer'
+              cursor: 'pointer',
+              boxShadow: '0 2px 6px rgba(15, 23, 42, 0.08)'
             }}
             className="mobile-hamburger"
           >
@@ -396,13 +397,13 @@ export default function Navbar({ activeView, setActiveView, onOpenRfq, rfqCount 
       {mobileMenuOpen && (
         <div 
           style={{
-            background: 'rgba(8, 10, 15, 0.98)',
-            borderTop: '1px solid rgba(212, 175, 55, 0.2)',
+            background: 'rgba(255, 255, 255, 0.98)',
+            borderTop: '1px solid rgba(184, 134, 11, 0.25)',
             padding: '1.5rem',
             display: 'flex',
             flexDirection: 'column',
             gap: '1rem',
-            boxShadow: '0 20px 40px rgba(0,0,0,0.9)'
+            boxShadow: '0 20px 40px rgba(15, 23, 42, 0.15)'
           }}
         >
           <button
@@ -411,9 +412,9 @@ export default function Navbar({ activeView, setActiveView, onOpenRfq, rfqCount 
               display: 'flex',
               alignItems: 'center',
               gap: '0.75rem',
-              background: activeView === 'group' ? 'rgba(212, 175, 55, 0.15)' : 'none',
+              background: activeView === 'group' ? 'rgba(184, 134, 11, 0.12)' : 'none',
               border: 'none',
-              color: '#FFF',
+              color: '#0F172A',
               padding: '0.75rem 1rem',
               borderRadius: '8px',
               textAlign: 'left',
@@ -436,9 +437,9 @@ export default function Navbar({ activeView, setActiveView, onOpenRfq, rfqCount 
               display: 'flex',
               alignItems: 'center',
               gap: '0.75rem',
-              background: activeView === 'hardware' ? 'rgba(212, 175, 55, 0.15)' : 'rgba(255, 255, 255, 0.03)',
-              border: '1px solid rgba(212, 175, 55, 0.2)',
-              color: '#FFF',
+              background: activeView === 'hardware' ? 'rgba(184, 134, 11, 0.12)' : 'rgba(15, 23, 42, 0.03)',
+              border: '1px solid rgba(184, 134, 11, 0.25)',
+              color: '#0F172A',
               padding: '0.85rem 1rem',
               borderRadius: '8px',
               textAlign: 'left',
@@ -460,9 +461,9 @@ export default function Navbar({ activeView, setActiveView, onOpenRfq, rfqCount 
               display: 'flex',
               alignItems: 'center',
               gap: '0.75rem',
-              background: activeView === 'software' ? 'rgba(212, 175, 55, 0.15)' : 'rgba(255, 255, 255, 0.03)',
-              border: '1px solid rgba(212, 175, 55, 0.2)',
-              color: '#FFF',
+              background: activeView === 'software' ? 'rgba(184, 134, 11, 0.12)' : 'rgba(15, 23, 42, 0.03)',
+              border: '1px solid rgba(184, 134, 11, 0.25)',
+              color: '#0F172A',
               padding: '0.85rem 1rem',
               borderRadius: '8px',
               textAlign: 'left',

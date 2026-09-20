@@ -20,7 +20,7 @@ export default function CompanyHub({ activeView, setActiveView, onOpenRfq }) {
   const [selectedSubTab, setSelectedSubTab] = useState('both'); // 'both' | 'hardware' | 'software'
 
   return (
-    <section id="companies-hub" className="section-padding" style={{ position: 'relative', background: 'rgba(9, 11, 15, 0.7)' }}>
+    <section id="companies-hub" className="section-padding" style={{ position: 'relative', background: 'transparent' }}>
       <div className="container">
         
         {/* Section Header */}
@@ -41,8 +41,8 @@ export default function CompanyHub({ activeView, setActiveView, onOpenRfq }) {
           <div 
             style={{
               display: 'inline-flex',
-              background: 'rgba(16, 21, 30, 0.85)',
-              border: '1px solid rgba(212, 175, 55, 0.3)',
+              background: '#F1F5F9',
+              border: '1px solid rgba(184, 134, 11, 0.25)',
               borderRadius: '12px',
               padding: '0.35rem',
               marginTop: '2rem',
@@ -53,7 +53,7 @@ export default function CompanyHub({ activeView, setActiveView, onOpenRfq }) {
               onClick={() => setSelectedSubTab('both')}
               style={{
                 background: selectedSubTab === 'both' ? 'var(--gold-gradient)' : 'transparent',
-                color: selectedSubTab === 'both' ? '#090B0E' : 'var(--text-secondary)',
+                color: selectedSubTab === 'both' ? '#FFFFFF' : 'var(--text-secondary)',
                 fontWeight: 700,
                 border: 'none',
                 padding: '0.65rem 1.4rem',
@@ -71,7 +71,7 @@ export default function CompanyHub({ activeView, setActiveView, onOpenRfq }) {
               onClick={() => setSelectedSubTab('hardware')}
               style={{
                 background: selectedSubTab === 'hardware' ? 'var(--gold-gradient)' : 'transparent',
-                color: selectedSubTab === 'hardware' ? '#090B0E' : 'var(--text-secondary)',
+                color: selectedSubTab === 'hardware' ? '#FFFFFF' : 'var(--text-secondary)',
                 fontWeight: 700,
                 border: 'none',
                 padding: '0.65rem 1.4rem',
@@ -93,7 +93,7 @@ export default function CompanyHub({ activeView, setActiveView, onOpenRfq }) {
               onClick={() => setSelectedSubTab('software')}
               style={{
                 background: selectedSubTab === 'software' ? 'var(--gold-gradient)' : 'transparent',
-                color: selectedSubTab === 'software' ? '#090B0E' : 'var(--text-secondary)',
+                color: selectedSubTab === 'software' ? '#FFFFFF' : 'var(--text-secondary)',
                 fontWeight: 700,
                 border: 'none',
                 padding: '0.65rem 1.4rem',
@@ -130,8 +130,9 @@ export default function CompanyHub({ activeView, setActiveView, onOpenRfq }) {
               style={{
                 display: 'flex',
                 flexDirection: 'column',
-                border: '1px solid rgba(212, 175, 55, 0.3)',
-                background: 'linear-gradient(180deg, rgba(17, 22, 33, 0.95) 0%, rgba(10, 13, 19, 0.98) 100%)'
+                border: '1px solid rgba(184, 134, 11, 0.25)',
+                background: '#FFFFFF',
+                boxShadow: '0 10px 30px rgba(15, 23, 42, 0.05)'
               }}
             >
               {/* Card Banner Image */}
@@ -161,12 +162,12 @@ export default function CompanyHub({ activeView, setActiveView, onOpenRfq }) {
               {/* Card Content */}
               <div style={{ padding: '2rem', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.75rem' }}>
-                  <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.85rem', color: '#FFF', fontWeight: 800 }}>
+                  <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.85rem', color: 'var(--text-primary)', fontWeight: 800 }}>
                     Zayrath Tech Systems
                   </h3>
                 </div>
 
-                <div style={{ fontSize: '0.9rem', color: 'var(--gold-light)', fontWeight: 600, letterSpacing: '0.05em', marginBottom: '1rem', textTransform: 'uppercase' }}>
+                <div style={{ fontSize: '0.9rem', color: 'var(--text-gold)', fontWeight: 700, letterSpacing: '0.05em', marginBottom: '1rem', textTransform: 'uppercase' }}>
                   Enterprise IT Products & Critical Hardware Sales
                 </div>
 
@@ -176,27 +177,27 @@ export default function CompanyHub({ activeView, setActiveView, onOpenRfq }) {
 
                 {/* Key Offerings List */}
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem', marginBottom: '2rem' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.88rem', color: '#E2E8F0' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.88rem', color: 'var(--text-primary)' }}>
                     <CheckCircle2 size={16} style={{ color: 'var(--gold-primary)', flexShrink: 0 }} />
                     <span>High-Density Rack Servers</span>
                   </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.88rem', color: '#E2E8F0' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.88rem', color: 'var(--text-primary)' }}>
                     <CheckCircle2 size={16} style={{ color: 'var(--gold-primary)', flexShrink: 0 }} />
                     <span>AI & GPU Compute Clusters</span>
                   </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.88rem', color: '#E2E8F0' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.88rem', color: 'var(--text-primary)' }}>
                     <CheckCircle2 size={16} style={{ color: 'var(--gold-primary)', flexShrink: 0 }} />
                     <span>CAD & Executive Workstations</span>
                   </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.88rem', color: '#E2E8F0' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.88rem', color: 'var(--text-primary)' }}>
                     <CheckCircle2 size={16} style={{ color: 'var(--gold-primary)', flexShrink: 0 }} />
                     <span>Enterprise Switches & Routers</span>
                   </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.88rem', color: '#E2E8F0' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.88rem', color: 'var(--text-primary)' }}>
                     <CheckCircle2 size={16} style={{ color: 'var(--gold-primary)', flexShrink: 0 }} />
                     <span>SAN & High-Speed NVMe Storage</span>
                   </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.88rem', color: '#E2E8F0' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.88rem', color: 'var(--text-primary)' }}>
                     <CheckCircle2 size={16} style={{ color: 'var(--gold-primary)', flexShrink: 0 }} />
                     <span>Next-Gen Hardware Firewalls</span>
                   </div>
@@ -231,8 +232,9 @@ export default function CompanyHub({ activeView, setActiveView, onOpenRfq }) {
               style={{
                 display: 'flex',
                 flexDirection: 'column',
-                border: '1px solid rgba(212, 175, 55, 0.3)',
-                background: 'linear-gradient(180deg, rgba(17, 22, 33, 0.95) 0%, rgba(10, 13, 19, 0.98) 100%)'
+                border: '1px solid rgba(184, 134, 11, 0.25)',
+                background: '#FFFFFF',
+                boxShadow: '0 10px 30px rgba(15, 23, 42, 0.05)'
               }}
             >
               {/* Card Banner Image */}
@@ -248,7 +250,7 @@ export default function CompanyHub({ activeView, setActiveView, onOpenRfq }) {
                   style={{
                     position: 'absolute',
                     inset: 0,
-                    background: 'linear-gradient(180deg, transparent 40%, rgba(10, 13, 19, 0.95) 100%)'
+                    background: 'linear-gradient(180deg, transparent 40%, rgba(15, 23, 42, 0.8) 100%)'
                   }}
                 />
                 <div style={{ position: 'absolute', top: '1.25rem', left: '1.25rem' }}>
@@ -262,12 +264,12 @@ export default function CompanyHub({ activeView, setActiveView, onOpenRfq }) {
               {/* Card Content */}
               <div style={{ padding: '2rem', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.75rem' }}>
-                  <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.85rem', color: '#FFF', fontWeight: 800 }}>
+                  <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.85rem', color: 'var(--text-primary)', fontWeight: 800 }}>
                     Zayrath Software Solutions
                   </h3>
                 </div>
 
-                <div style={{ fontSize: '0.9rem', color: 'var(--gold-light)', fontWeight: 600, letterSpacing: '0.05em', marginBottom: '1rem', textTransform: 'uppercase' }}>
+                <div style={{ fontSize: '0.9rem', color: 'var(--text-gold)', fontWeight: 700, letterSpacing: '0.05em', marginBottom: '1rem', textTransform: 'uppercase' }}>
                   Full-Cycle Digital Solutions & Enterprise AI Engineering
                 </div>
 
@@ -277,27 +279,27 @@ export default function CompanyHub({ activeView, setActiveView, onOpenRfq }) {
 
                 {/* Key Offerings List */}
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem', marginBottom: '2rem' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.88rem', color: '#E2E8F0' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.88rem', color: 'var(--text-primary)' }}>
                     <CheckCircle2 size={16} style={{ color: 'var(--gold-primary)', flexShrink: 0 }} />
                     <span>Custom Enterprise ERP & CRM</span>
                   </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.88rem', color: '#E2E8F0' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.88rem', color: 'var(--text-primary)' }}>
                     <CheckCircle2 size={16} style={{ color: 'var(--gold-primary)', flexShrink: 0 }} />
                     <span>Generative AI & LLM Pipelines</span>
                   </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.88rem', color: '#E2E8F0' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.88rem', color: 'var(--text-primary)' }}>
                     <CheckCircle2 size={16} style={{ color: 'var(--gold-primary)', flexShrink: 0 }} />
                     <span>Cloud Native (AWS, Azure, GCP)</span>
                   </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.88rem', color: '#E2E8F0' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.88rem', color: 'var(--text-primary)' }}>
                     <CheckCircle2 size={16} style={{ color: 'var(--gold-primary)', flexShrink: 0 }} />
                     <span>iOS & Android Native Ecosystems</span>
                   </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.88rem', color: '#E2E8F0' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.88rem', color: 'var(--text-primary)' }}>
                     <CheckCircle2 size={16} style={{ color: 'var(--gold-primary)', flexShrink: 0 }} />
                     <span>DevSecOps & Microservices</span>
                   </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.88rem', color: '#E2E8F0' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.88rem', color: 'var(--text-primary)' }}>
                     <CheckCircle2 size={16} style={{ color: 'var(--gold-primary)', flexShrink: 0 }} />
                     <span>Zero-Trust Cybersecurity Audits</span>
                   </div>

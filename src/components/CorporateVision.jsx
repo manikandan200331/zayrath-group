@@ -138,7 +138,9 @@ export default function CorporateVision() {
                 style={{
                   padding: '2rem 1.5rem',
                   textAlign: 'center',
-                  background: 'rgba(15, 19, 28, 0.75)'
+                  background: '#FFFFFF',
+                  border: '1px solid rgba(184, 134, 11, 0.2)',
+                  boxShadow: '0 4px 20px rgba(15, 23, 42, 0.05)'
                 }}
               >
                 <div 
@@ -146,18 +148,18 @@ export default function CorporateVision() {
                     width: '50px',
                     height: '50px',
                     borderRadius: '50%',
-                    background: 'rgba(212, 175, 55, 0.15)',
-                    border: '1px solid rgba(212, 175, 55, 0.35)',
+                    background: 'rgba(184, 134, 11, 0.12)',
+                    border: '1px solid rgba(184, 134, 11, 0.25)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    color: 'var(--gold-light)',
+                    color: 'var(--text-gold)',
                     margin: '0 auto 1.25rem'
                   }}
                 >
                   <Icon size={22} />
                 </div>
-                <h4 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.15rem', color: '#FFF', fontWeight: 700, marginBottom: '0.65rem' }}>
+                <h4 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.15rem', color: 'var(--text-primary)', fontWeight: 700, marginBottom: '0.65rem' }}>
                   {pillar.title}
                 </h4>
                 <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', lineHeight: 1.6 }}>
@@ -173,15 +175,17 @@ export default function CorporateVision() {
           className="glass-card"
           style={{
             padding: '2.5rem',
-            background: 'linear-gradient(180deg, rgba(16, 20, 30, 0.9) 0%, rgba(9, 11, 16, 0.98) 100%)'
+            background: '#FFFFFF',
+            border: '1px solid rgba(184, 134, 11, 0.25)',
+            boxShadow: '0 8px 30px rgba(15, 23, 42, 0.06)'
           }}
         >
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem', marginBottom: '2rem' }}>
             <div>
-              <div style={{ fontSize: '0.78rem', color: 'var(--gold-light)', textTransform: 'uppercase', fontWeight: 700, letterSpacing: '0.08em' }}>
+              <div style={{ fontSize: '0.78rem', color: 'var(--text-gold)', textTransform: 'uppercase', fontWeight: 700, letterSpacing: '0.08em' }}>
                 Worldwide Operations Network
               </div>
-              <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.75rem', color: '#FFF', fontWeight: 800 }}>
+              <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.75rem', color: 'var(--text-primary)', fontWeight: 800 }}>
                 Zayrath Group Global Presence
               </h3>
             </div>
@@ -203,17 +207,17 @@ export default function CorporateVision() {
               <div 
                 key={idx}
                 style={{
-                  background: 'rgba(8, 10, 15, 0.7)',
-                  border: '1px solid rgba(212, 175, 55, 0.2)',
+                  background: '#F8FAFC',
+                  border: '1px solid rgba(184, 134, 11, 0.2)',
                   borderRadius: '10px',
                   padding: '1.25rem'
                 }}
               >
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
                   <MapPin size={16} style={{ color: 'var(--gold-primary)' }} />
-                  <span style={{ fontWeight: 700, color: '#FFF', fontSize: '1rem' }}>{hub.city}</span>
+                  <span style={{ fontWeight: 700, color: 'var(--text-primary)', fontSize: '1rem' }}>{hub.city}</span>
                 </div>
-                <div style={{ fontSize: '0.8rem', color: 'var(--gold-light)', fontWeight: 600, marginBottom: '0.35rem' }}>
+                <div style={{ fontSize: '0.8rem', color: 'var(--text-gold)', fontWeight: 600, marginBottom: '0.35rem' }}>
                   {hub.role}
                 </div>
                 <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>

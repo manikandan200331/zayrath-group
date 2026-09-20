@@ -25,10 +25,10 @@ export default function GoldParticleBackground() {
     const particles = [];
 
     const goldColors = [
-      'rgba(212, 175, 55, ',    // Primary gold
-      'rgba(247, 229, 153, ',   // Light gold
-      'rgba(230, 193, 91, ',    // Mid gold
-      'rgba(184, 142, 28, '     // Deep gold
+      'rgba(184, 134, 11, ',    // Primary deep gold
+      'rgba(202, 138, 4, ',     // Amber gold
+      'rgba(161, 98, 7, ',      // Dark bronze gold
+      'rgba(217, 119, 6, '      // Warm orange-gold
     ];
 
     for (let i = 0; i < particleCount; i++) {
@@ -39,7 +39,7 @@ export default function GoldParticleBackground() {
         vx: (Math.random() - 0.5) * 0.4,
         vy: (Math.random() - 0.5) * 0.4,
         colorBase: goldColors[Math.floor(Math.random() * goldColors.length)],
-        alpha: Math.random() * 0.6 + 0.2,
+        alpha: Math.random() * 0.5 + 0.3,
         pulseSpeed: Math.random() * 0.02 + 0.005,
         pulseVal: Math.random() * Math.PI
       });
@@ -74,14 +74,14 @@ export default function GoldParticleBackground() {
         // Gentle alpha pulsation
         p.pulseVal += p.pulseSpeed;
         const currentAlpha = p.alpha + Math.sin(p.pulseVal) * 0.2;
-        const clampedAlpha = Math.max(0.1, Math.min(0.85, currentAlpha));
+        const clampedAlpha = Math.max(0.15, Math.min(0.75, currentAlpha));
 
         // Draw particle
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
         ctx.fillStyle = `${p.colorBase}${clampedAlpha})`;
-        ctx.shadowBlur = 8;
-        ctx.shadowColor = 'rgba(212, 175, 55, 0.4)';
+        ctx.shadowBlur = 6;
+        ctx.shadowColor = 'rgba(184, 134, 11, 0.35)';
         ctx.fill();
 
         // Connect nearby particles with subtle golden threads
@@ -95,9 +95,9 @@ export default function GoldParticleBackground() {
             ctx.beginPath();
             ctx.moveTo(p.x, p.y);
             ctx.lineTo(p2.x, p2.y);
-            const lineAlpha = (1 - dist / 110) * 0.15;
-            ctx.strokeStyle = `rgba(212, 175, 55, ${lineAlpha})`;
-            ctx.lineWidth = 0.6;
+            const lineAlpha = (1 - dist / 110) * 0.22;
+            ctx.strokeStyle = `rgba(184, 134, 11, ${lineAlpha})`;
+            ctx.lineWidth = 0.65;
             ctx.stroke();
           }
         }
@@ -110,9 +110,9 @@ export default function GoldParticleBackground() {
           ctx.beginPath();
           ctx.moveTo(p.x, p.y);
           ctx.lineTo(mouseX, mouseY);
-          const mAlpha = (1 - mDist / 140) * 0.25;
-          ctx.strokeStyle = `rgba(247, 229, 153, ${mAlpha})`;
-          ctx.lineWidth = 0.8;
+          const mAlpha = (1 - mDist / 140) * 0.35;
+          ctx.strokeStyle = `rgba(202, 138, 4, ${mAlpha})`;
+          ctx.lineWidth = 0.85;
           ctx.stroke();
         }
       }

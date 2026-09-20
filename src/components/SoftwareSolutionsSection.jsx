@@ -105,7 +105,7 @@ export default function SoftwareSolutionsSection({ onOpenConsultation }) {
   const estimate = calculateEstimate();
 
   return (
-    <section id="software-services" className="section-padding" style={{ position: 'relative', background: 'rgba(7, 9, 13, 0.9)' }}>
+    <section id="software-services" className="section-padding" style={{ position: 'relative', background: 'transparent' }}>
       
       {/* Ambient Glow */}
       <div 
@@ -150,7 +150,9 @@ export default function SoftwareSolutionsSection({ onOpenConsultation }) {
                   padding: '2.25rem',
                   display: 'flex',
                   flexDirection: 'column',
-                  background: 'linear-gradient(180deg, rgba(16, 21, 31, 0.85) 0%, rgba(10, 13, 19, 0.95) 100%)'
+                  background: '#FFFFFF',
+                  border: '1px solid rgba(184, 134, 11, 0.25)',
+                  boxShadow: '0 8px 24px rgba(15, 23, 42, 0.05)'
                 }}
               >
                 <div 
@@ -158,23 +160,23 @@ export default function SoftwareSolutionsSection({ onOpenConsultation }) {
                     width: '54px',
                     height: '54px',
                     borderRadius: '12px',
-                    background: 'rgba(212, 175, 55, 0.15)',
-                    border: '1px solid rgba(212, 175, 55, 0.35)',
+                    background: 'rgba(184, 134, 11, 0.12)',
+                    border: '1px solid rgba(184, 134, 11, 0.25)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    color: 'var(--gold-light)',
+                    color: 'var(--text-gold)',
                     marginBottom: '1.5rem',
-                    boxShadow: '0 0 15px rgba(212, 175, 55, 0.2)'
+                    boxShadow: '0 4px 15px rgba(184, 134, 11, 0.15)'
                   }}
                 >
                   <Icon size={26} />
                 </div>
 
-                <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.35rem', color: '#FFF', fontWeight: 700, marginBottom: '0.4rem' }}>
+                <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.35rem', color: 'var(--text-primary)', fontWeight: 700, marginBottom: '0.4rem' }}>
                   {service.title}
                 </h3>
-                <div style={{ fontSize: '0.85rem', color: 'var(--gold-light)', marginBottom: '1.1rem', fontWeight: 600 }}>
+                <div style={{ fontSize: '0.85rem', color: 'var(--text-gold)', marginBottom: '1.1rem', fontWeight: 600 }}>
                   {service.subtitle}
                 </div>
 
@@ -191,9 +193,10 @@ export default function SoftwareSolutionsSection({ onOpenConsultation }) {
                         fontSize: '0.74rem',
                         padding: '0.25rem 0.65rem',
                         borderRadius: '4px',
-                        background: 'rgba(255, 255, 255, 0.04)',
-                        border: '1px solid rgba(255, 255, 255, 0.08)',
-                        color: '#CBD5E1'
+                        background: '#F1F5F9',
+                        border: '1px solid rgba(184, 134, 11, 0.15)',
+                        color: 'var(--text-secondary)',
+                        fontWeight: 500
                       }}
                     >
                       {tag}
@@ -211,9 +214,9 @@ export default function SoftwareSolutionsSection({ onOpenConsultation }) {
           className="glass-card"
           style={{
             padding: '3rem',
-            border: '1px solid rgba(212, 175, 55, 0.4)',
-            background: 'linear-gradient(135deg, rgba(16, 21, 31, 0.95) 0%, rgba(9, 12, 17, 0.98) 100%)',
-            boxShadow: '0 20px 50px rgba(0,0,0,0.85), 0 0 35px rgba(212, 175, 55, 0.15)'
+            border: '1px solid rgba(184, 134, 11, 0.35)',
+            background: '#FFFFFF',
+            boxShadow: '0 20px 45px rgba(15, 23, 42, 0.08), 0 0 30px rgba(184, 134, 11, 0.1)'
           }}
         >
           <div style={{ display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: '3rem', alignItems: 'center' }} className="estimator-grid">
@@ -225,7 +228,7 @@ export default function SoftwareSolutionsSection({ onOpenConsultation }) {
                 <span>Interactive Architecture & Cost Estimator</span>
               </div>
 
-              <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '2rem', color: '#FFF', fontWeight: 800, marginBottom: '0.75rem' }}>
+              <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '2rem', color: 'var(--text-primary)', fontWeight: 800, marginBottom: '0.75rem' }}>
                 Configure Your Software Solution
               </h3>
               <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', marginBottom: '2rem' }}>
@@ -234,7 +237,7 @@ export default function SoftwareSolutionsSection({ onOpenConsultation }) {
 
               {/* Step 1: Solution Platform */}
               <div style={{ marginBottom: '1.75rem' }}>
-                <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--gold-light)', fontWeight: 700, textTransform: 'uppercase', marginBottom: '0.65rem' }}>
+                <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--text-gold)', fontWeight: 700, textTransform: 'uppercase', marginBottom: '0.65rem' }}>
                   1. Target Software Scope
                 </label>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '0.65rem' }}>
@@ -254,9 +257,9 @@ export default function SoftwareSolutionsSection({ onOpenConsultation }) {
                         fontWeight: platform === item.id ? 700 : 500,
                         cursor: 'pointer',
                         textAlign: 'left',
-                        background: platform === item.id ? 'rgba(212, 175, 55, 0.18)' : 'rgba(255, 255, 255, 0.03)',
-                        border: platform === item.id ? '1px solid var(--gold-primary)' : '1px solid rgba(255, 255, 255, 0.08)',
-                        color: platform === item.id ? '#FFF' : 'var(--text-secondary)',
+                        background: platform === item.id ? 'rgba(184, 134, 11, 0.12)' : '#F8FAFC',
+                        border: platform === item.id ? '1.5px solid var(--gold-primary)' : '1px solid rgba(184, 134, 11, 0.2)',
+                        color: platform === item.id ? '#713F12' : 'var(--text-secondary)',
                         transition: 'all 0.2s'
                       }}
                     >
@@ -268,7 +271,7 @@ export default function SoftwareSolutionsSection({ onOpenConsultation }) {
 
               {/* Step 2: Deployment Scale */}
               <div style={{ marginBottom: '1.75rem' }}>
-                <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--gold-light)', fontWeight: 700, textTransform: 'uppercase', marginBottom: '0.65rem' }}>
+                <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--text-gold)', fontWeight: 700, textTransform: 'uppercase', marginBottom: '0.65rem' }}>
                   2. Architectural Scale
                 </label>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0.65rem' }}>
@@ -285,14 +288,14 @@ export default function SoftwareSolutionsSection({ onOpenConsultation }) {
                         borderRadius: '8px',
                         cursor: 'pointer',
                         textAlign: 'center',
-                        background: tier === t.id ? 'rgba(212, 175, 55, 0.18)' : 'rgba(255, 255, 255, 0.03)',
-                        border: tier === t.id ? '1px solid var(--gold-primary)' : '1px solid rgba(255, 255, 255, 0.08)',
-                        color: tier === t.id ? '#FFF' : 'var(--text-secondary)',
+                        background: tier === t.id ? 'rgba(184, 134, 11, 0.12)' : '#F8FAFC',
+                        border: tier === t.id ? '1.5px solid var(--gold-primary)' : '1px solid rgba(184, 134, 11, 0.2)',
+                        color: tier === t.id ? '#713F12' : 'var(--text-secondary)',
                         transition: 'all 0.2s'
                       }}
                     >
                       <div style={{ fontWeight: 700, fontSize: '0.88rem' }}>{t.title}</div>
-                      <div style={{ fontSize: '0.72rem', opacity: 0.8 }}>{t.desc}</div>
+                      <div style={{ fontSize: '0.72rem', opacity: 0.85 }}>{t.desc}</div>
                     </button>
                   ))}
                 </div>
@@ -300,7 +303,7 @@ export default function SoftwareSolutionsSection({ onOpenConsultation }) {
 
               {/* Step 3: Add-on Capabilities */}
               <div>
-                <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--gold-light)', fontWeight: 700, textTransform: 'uppercase', marginBottom: '0.65rem' }}>
+                <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--text-gold)', fontWeight: 700, textTransform: 'uppercase', marginBottom: '0.65rem' }}>
                   3. Critical Enhancements
                 </label>
                 <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
@@ -311,7 +314,8 @@ export default function SoftwareSolutionsSection({ onOpenConsultation }) {
                       gap: '0.5rem', 
                       cursor: 'pointer', 
                       fontSize: '0.88rem',
-                      color: includeAI ? 'var(--gold-light)' : 'var(--text-secondary)'
+                      color: includeAI ? 'var(--text-gold)' : 'var(--text-secondary)',
+                      fontWeight: includeAI ? 700 : 500
                     }}
                   >
                     <input 
@@ -330,7 +334,8 @@ export default function SoftwareSolutionsSection({ onOpenConsultation }) {
                       gap: '0.5rem', 
                       cursor: 'pointer', 
                       fontSize: '0.88rem',
-                      color: includeCompliance ? 'var(--gold-light)' : 'var(--text-secondary)'
+                      color: includeCompliance ? 'var(--text-gold)' : 'var(--text-secondary)',
+                      fontWeight: includeCompliance ? 700 : 500
                     }}
                   >
                     <input 
@@ -349,15 +354,15 @@ export default function SoftwareSolutionsSection({ onOpenConsultation }) {
             {/* Right Projected Output Card */}
             <div 
               style={{
-                background: 'rgba(8, 10, 15, 0.95)',
-                border: '1px solid rgba(212, 175, 55, 0.35)',
+                background: '#F8FAFC',
+                border: '1px solid rgba(184, 134, 11, 0.3)',
                 borderRadius: '16px',
                 padding: '2.25rem',
-                boxShadow: '0 10px 30px rgba(0, 0, 0, 0.7)'
+                boxShadow: '0 10px 30px rgba(15, 23, 42, 0.06)'
               }}
             >
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
-                <span style={{ fontSize: '0.75rem', textTransform: 'uppercase', color: 'var(--gold-light)', fontWeight: 700, letterSpacing: '0.08em' }}>
+                <span style={{ fontSize: '0.75rem', textTransform: 'uppercase', color: 'var(--text-gold)', fontWeight: 700, letterSpacing: '0.08em' }}>
                   Project Scope Synthesis
                 </span>
                 <span className="badge-gold">
@@ -370,7 +375,7 @@ export default function SoftwareSolutionsSection({ onOpenConsultation }) {
                 <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)', textTransform: 'uppercase' }}>
                   Budgetary Investment Range
                 </div>
-                <div style={{ fontFamily: 'var(--font-heading)', fontSize: '2.5rem', fontWeight: 800, color: 'var(--gold-light)', lineHeight: 1.1 }}>
+                <div style={{ fontFamily: 'var(--font-heading)', fontSize: '2.5rem', fontWeight: 800, color: 'var(--text-gold)', lineHeight: 1.1 }}>
                   {estimate.priceRange}
                 </div>
                 <div style={{ fontSize: '0.78rem', color: 'var(--text-secondary)', marginTop: '0.35rem' }}>
@@ -386,21 +391,21 @@ export default function SoftwareSolutionsSection({ onOpenConsultation }) {
                   <span style={{ color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
                     <Calendar size={15} style={{ color: 'var(--gold-primary)' }} /> Target Delivery:
                   </span>
-                  <span style={{ color: '#FFF', fontWeight: 600 }}>{estimate.timeline}</span>
+                  <span style={{ color: 'var(--text-primary)', fontWeight: 600 }}>{estimate.timeline}</span>
                 </div>
 
                 <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.88rem' }}>
                   <span style={{ color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
                     <Cpu size={15} style={{ color: 'var(--gold-primary)' }} /> Assigned Squad:
                   </span>
-                  <span style={{ color: '#FFF', fontWeight: 600 }}>{estimate.teamComposition}</span>
+                  <span style={{ color: 'var(--text-primary)', fontWeight: 600 }}>{estimate.teamComposition}</span>
                 </div>
 
                 <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.88rem' }}>
                   <span style={{ color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
                     <ShieldCheck size={15} style={{ color: 'var(--gold-primary)' }} /> Code Ownership:
                   </span>
-                  <span style={{ color: 'var(--gold-light)', fontWeight: 700 }}>100% Client IP Assignment</span>
+                  <span style={{ color: 'var(--text-gold)', fontWeight: 700 }}>100% Client IP Assignment</span>
                 </div>
               </div>
 

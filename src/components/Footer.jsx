@@ -33,8 +33,8 @@ export default function Footer({ setActiveView, onOpenRfq }) {
   return (
     <footer 
       style={{
-        background: 'linear-gradient(180deg, #090B0F 0%, #050608 100%)',
-        borderTop: '1px solid rgba(212, 175, 55, 0.25)',
+        background: '#F8FAFC',
+        borderTop: '1px solid rgba(184, 134, 11, 0.25)',
         paddingTop: '5rem',
         paddingBottom: '2.5rem',
         position: 'relative'
@@ -62,7 +62,7 @@ export default function Footer({ setActiveView, onOpenRfq }) {
                   height: '48px',
                   borderRadius: '10px',
                   overflow: 'hidden',
-                  border: '1px solid rgba(212, 175, 55, 0.4)'
+                  border: '1px solid rgba(184, 134, 11, 0.4)'
                 }}
               >
                 <img 
@@ -75,13 +75,13 @@ export default function Footer({ setActiveView, onOpenRfq }) {
                 <div style={{ fontFamily: 'var(--font-serif)', fontSize: '1.4rem', fontWeight: 800, background: 'var(--gold-gradient-text)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                   ZAYRATH
                 </div>
-                <div style={{ fontSize: '0.68rem', letterSpacing: '0.3em', color: 'var(--gold-light)', textTransform: 'uppercase', fontWeight: 700 }}>
+                <div style={{ fontSize: '0.68rem', letterSpacing: '0.3em', color: 'var(--text-gold)', textTransform: 'uppercase', fontWeight: 700 }}>
                   G R O U P
                 </div>
               </div>
             </div>
 
-            <p style={{ color: 'var(--gold-light)', fontStyle: 'italic', fontSize: '0.92rem', marginBottom: '1rem', fontWeight: 600 }}>
+            <p style={{ color: 'var(--text-gold)', fontStyle: 'italic', fontSize: '0.92rem', marginBottom: '1rem', fontWeight: 700 }}>
               "A Distinctive Path to Progress"
             </p>
 
@@ -89,7 +89,7 @@ export default function Footer({ setActiveView, onOpenRfq }) {
               Premier multinational conglomerate operating frontier subsidiaries in physical IT hardware engineering and custom enterprise software intelligence.
             </p>
 
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--gold-light)', fontSize: '0.82rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-gold)', fontSize: '0.82rem', fontWeight: 600 }}>
               <ShieldCheck size={16} style={{ color: 'var(--gold-primary)' }} />
               <span>Registered Enterprise Conglomerate</span>
             </div>
@@ -99,7 +99,7 @@ export default function Footer({ setActiveView, onOpenRfq }) {
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1.25rem' }}>
               <Server size={18} style={{ color: 'var(--gold-primary)' }} />
-              <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1rem', fontWeight: 700, color: '#FFF' }}>
+              <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1rem', fontWeight: 700, color: 'var(--text-primary)' }}>
                 Zayrath Tech Systems
               </div>
             </div>
@@ -200,7 +200,7 @@ export default function Footer({ setActiveView, onOpenRfq }) {
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1.25rem' }}>
               <Code2 size={18} style={{ color: 'var(--gold-primary)' }} />
-              <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1rem', fontWeight: 700, color: '#FFF' }}>
+              <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1rem', fontWeight: 700, color: 'var(--text-primary)' }}>
                 Zayrath Software Solutions
               </div>
             </div>
@@ -216,7 +216,7 @@ export default function Footer({ setActiveView, onOpenRfq }) {
                     }, 50);
                   }}
                   style={{ color: 'var(--text-secondary)', cursor: 'pointer' }}
-                  onMouseEnter={(e) => e.target.style.color = 'var(--gold-light)'}
+                  onMouseEnter={(e) => e.target.style.color = 'var(--text-gold)'}
                   onMouseLeave={(e) => e.target.style.color = 'var(--text-secondary)'}
                 >
                   Private LLMs & AI Agents
@@ -232,7 +232,7 @@ export default function Footer({ setActiveView, onOpenRfq }) {
                     }, 50);
                   }}
                   style={{ color: 'var(--text-secondary)', cursor: 'pointer' }}
-                  onMouseEnter={(e) => e.target.style.color = 'var(--gold-light)'}
+                  onMouseEnter={(e) => e.target.style.color = 'var(--text-gold)'}
                   onMouseLeave={(e) => e.target.style.color = 'var(--text-secondary)'}
                 >
                   Custom Enterprise ERP & CRM
@@ -248,7 +248,7 @@ export default function Footer({ setActiveView, onOpenRfq }) {
                     }, 50);
                   }}
                   style={{ color: 'var(--text-secondary)', cursor: 'pointer' }}
-                  onMouseEnter={(e) => e.target.style.color = 'var(--gold-light)'}
+                  onMouseEnter={(e) => e.target.style.color = 'var(--text-gold)'}
                   onMouseLeave={(e) => e.target.style.color = 'var(--text-secondary)'}
                 >
                   Multi-Cloud DevOps & K8s
@@ -264,7 +264,7 @@ export default function Footer({ setActiveView, onOpenRfq }) {
                     }, 50);
                   }}
                   style={{ color: 'var(--text-secondary)', cursor: 'pointer' }}
-                  onMouseEnter={(e) => e.target.style.color = 'var(--gold-light)'}
+                  onMouseEnter={(e) => e.target.style.color = 'var(--text-gold)'}
                   onMouseLeave={(e) => e.target.style.color = 'var(--text-secondary)'}
                 >
                   Mobile iOS & Android Apps
@@ -289,7 +289,7 @@ export default function Footer({ setActiveView, onOpenRfq }) {
 
           {/* Col 4: Corporate Governance & Newsletter */}
           <div>
-            <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1rem', fontWeight: 700, color: '#FFF', marginBottom: '1.25rem' }}>
+            <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1rem', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '1.25rem' }}>
               Corporate Intelligence
             </div>
 
@@ -306,10 +306,10 @@ export default function Footer({ setActiveView, onOpenRfq }) {
                 onChange={(e) => setEmail(e.target.value)}
                 style={{
                   padding: '0.75rem 1rem',
-                  background: 'rgba(17, 21, 30, 0.9)',
-                  border: '1px solid rgba(212, 175, 55, 0.3)',
+                  background: '#FFFFFF',
+                  border: '1px solid rgba(184, 134, 11, 0.3)',
                   borderRadius: '8px',
-                  color: '#FFF',
+                  color: 'var(--text-primary)',
                   fontSize: '0.85rem',
                   outline: 'none'
                 }}
@@ -333,7 +333,7 @@ export default function Footer({ setActiveView, onOpenRfq }) {
         {/* Bottom Bar */}
         <div 
           style={{
-            borderTop: '1px solid rgba(212, 175, 55, 0.15)',
+            borderTop: '1px solid rgba(184, 134, 11, 0.2)',
             paddingTop: '2rem',
             display: 'flex',
             justifyContent: 'space-between',
@@ -345,7 +345,7 @@ export default function Footer({ setActiveView, onOpenRfq }) {
           }}
         >
           <div>
-            © 2026 <strong style={{ color: 'var(--gold-light)' }}>ZAYRATH GROUP</strong>. All Rights Reserved. A Distinctive Path to Progress.
+            © 2026 <strong style={{ color: 'var(--text-gold)' }}>ZAYRATH GROUP</strong>. All Rights Reserved. A Distinctive Path to Progress.
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
@@ -355,17 +355,18 @@ export default function Footer({ setActiveView, onOpenRfq }) {
             <button
               onClick={scrollToTop}
               style={{
-                background: 'rgba(212, 175, 55, 0.1)',
-                border: '1px solid rgba(212, 175, 55, 0.3)',
+                background: '#FFFFFF',
+                border: '1px solid rgba(184, 134, 11, 0.3)',
                 borderRadius: '50%',
                 width: '34px',
                 height: '34px',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                color: 'var(--gold-light)',
+                color: 'var(--text-gold)',
                 cursor: 'pointer',
-                marginLeft: '0.5rem'
+                marginLeft: '0.5rem',
+                boxShadow: '0 2px 8px rgba(15, 23, 42, 0.08)'
               }}
               title="Return to top"
             >

@@ -265,17 +265,18 @@ export default function TechProductsSection({ onAddToRfq, rfqItems, onOpenRfq })
                 style={{
                   width: '100%',
                   padding: '0.85rem 1rem 0.85rem 2.85rem',
-                  background: 'rgba(17, 21, 30, 0.85)',
-                  border: '1px solid rgba(212, 175, 55, 0.3)',
+                  background: '#FFFFFF',
+                  border: '1px solid rgba(184, 134, 11, 0.3)',
                   borderRadius: '10px',
-                  color: '#FFF',
+                  color: 'var(--text-primary)',
                   fontSize: '0.92rem',
                   fontFamily: 'var(--font-body)',
                   outline: 'none',
-                  transition: 'border-color 0.2s'
+                  transition: 'border-color 0.2s',
+                  boxShadow: '0 2px 8px rgba(15, 23, 42, 0.04)'
                 }}
                 onFocus={(e) => e.target.style.borderColor = 'var(--gold-primary)'}
-                onBlur={(e) => e.target.style.borderColor = 'rgba(212, 175, 55, 0.3)'}
+                onBlur={(e) => e.target.style.borderColor = 'rgba(184, 134, 11, 0.3)'}
               />
             </div>
 
@@ -315,9 +316,10 @@ export default function TechProductsSection({ onAddToRfq, rfqItems, onOpenRfq })
                     fontFamily: 'var(--font-heading)',
                     fontWeight: isSelected ? 700 : 500,
                     cursor: 'pointer',
-                    background: isSelected ? 'var(--gold-gradient)' : 'rgba(16, 21, 30, 0.7)',
-                    color: isSelected ? '#090B0E' : 'var(--text-secondary)',
-                    border: isSelected ? 'none' : '1px solid rgba(212, 175, 55, 0.25)',
+                    background: isSelected ? 'var(--gold-gradient)' : '#FFFFFF',
+                    color: isSelected ? '#FFFFFF' : 'var(--text-secondary)',
+                    border: isSelected ? 'none' : '1px solid rgba(184, 134, 11, 0.25)',
+                    boxShadow: isSelected ? '0 4px 15px rgba(184, 134, 11, 0.3)' : '0 2px 6px rgba(15, 23, 42, 0.04)',
                     transition: 'all 0.2s ease'
                   }}
                 >
@@ -336,24 +338,24 @@ export default function TechProductsSection({ onAddToRfq, rfqItems, onOpenRfq })
               position: 'fixed',
               bottom: '2rem',
               right: '2rem',
-              background: 'rgba(11, 14, 20, 0.95)',
+              background: '#FFFFFF',
               border: '1px solid var(--gold-primary)',
               borderRadius: '12px',
               padding: '1rem 1.5rem',
               display: 'flex',
               alignItems: 'center',
               gap: '1rem',
-              boxShadow: '0 10px 30px rgba(0,0,0,0.85), 0 0 20px rgba(212, 175, 55, 0.3)',
+              boxShadow: '0 12px 36px rgba(15, 23, 42, 0.15), 0 0 20px rgba(184, 134, 11, 0.2)',
               zIndex: 9999,
               animation: 'slideUp 0.3s ease'
             }}
           >
-            <div style={{ background: 'rgba(212, 175, 55, 0.2)', padding: '0.5rem', borderRadius: '50%', color: 'var(--gold-light)' }}>
+            <div style={{ background: 'rgba(184, 134, 11, 0.12)', padding: '0.5rem', borderRadius: '50%', color: 'var(--text-gold)' }}>
               <Check size={20} />
             </div>
             <div>
-              <div style={{ color: '#FFF', fontWeight: 700, fontSize: '0.9rem' }}>Added to Enterprise RFQ!</div>
-              <div style={{ color: 'var(--gold-light)', fontSize: '0.8rem' }}>{addedItemNotice}</div>
+              <div style={{ color: 'var(--text-primary)', fontWeight: 700, fontSize: '0.9rem' }}>Added to Enterprise RFQ!</div>
+              <div style={{ color: 'var(--text-gold)', fontSize: '0.8rem', fontWeight: 600 }}>{addedItemNotice}</div>
             </div>
             <button 
               onClick={onOpenRfq}
@@ -385,8 +387,9 @@ export default function TechProductsSection({ onAddToRfq, rfqItems, onOpenRfq })
                   display: 'flex',
                   flexDirection: 'column',
                   padding: '1.75rem',
-                  background: 'linear-gradient(180deg, rgba(18, 23, 34, 0.85) 0%, rgba(11, 14, 20, 0.95) 100%)',
-                  border: '1px solid rgba(212, 175, 55, 0.25)'
+                  background: '#FFFFFF',
+                  border: '1px solid rgba(184, 134, 11, 0.25)',
+                  boxShadow: '0 8px 24px rgba(15, 23, 42, 0.05)'
                 }}
               >
                 {/* Product Header */}
@@ -399,7 +402,7 @@ export default function TechProductsSection({ onAddToRfq, rfqItems, onOpenRfq })
                       style={{
                         fontSize: '0.7rem',
                         fontWeight: 700,
-                        color: '#07090C',
+                        color: '#FFFFFF',
                         background: 'var(--gold-gradient)',
                         padding: '0.2rem 0.55rem',
                         borderRadius: '4px',
@@ -412,20 +415,20 @@ export default function TechProductsSection({ onAddToRfq, rfqItems, onOpenRfq })
                   )}
                 </div>
 
-                <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.28rem', color: '#FFF', fontWeight: 700, marginBottom: '0.35rem' }}>
+                <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.28rem', color: 'var(--text-primary)', fontWeight: 700, marginBottom: '0.35rem' }}>
                   {product.name}
                 </h3>
-                <div style={{ fontSize: '0.85rem', color: 'var(--gold-light)', marginBottom: '1.25rem' }}>
+                <div style={{ fontSize: '0.85rem', color: 'var(--text-gold)', fontWeight: 600, marginBottom: '1.25rem' }}>
                   {product.tagline}
                 </div>
 
                 {/* Technical Specs Sheet */}
                 <div 
                   style={{
-                    background: 'rgba(8, 10, 15, 0.75)',
+                    background: '#F8FAFC',
                     borderRadius: '8px',
                     padding: '1rem',
-                    border: '1px solid rgba(255, 255, 255, 0.05)',
+                    border: '1px solid rgba(184, 134, 11, 0.15)',
                     marginBottom: '1.5rem',
                     flexGrow: 1
                   }}
@@ -440,7 +443,7 @@ export default function TechProductsSection({ onAddToRfq, rfqItems, onOpenRfq })
                         <span style={{ color: 'var(--text-secondary)', textTransform: 'capitalize', flexShrink: 0 }}>
                           {key}:
                         </span>
-                        <span style={{ color: '#E2E8F0', textAlign: 'right', fontWeight: 500 }}>
+                        <span style={{ color: 'var(--text-primary)', textAlign: 'right', fontWeight: 600 }}>
                           {val}
                         </span>
                       </div>
@@ -450,14 +453,15 @@ export default function TechProductsSection({ onAddToRfq, rfqItems, onOpenRfq })
                   {/* Warranty & SLA */}
                   <div 
                     style={{
-                      borderTop: '1px solid rgba(255, 255, 255, 0.08)',
+                      borderTop: '1px solid rgba(184, 134, 11, 0.15)',
                       marginTop: '0.85rem',
                       paddingTop: '0.65rem',
                       display: 'flex',
                       alignItems: 'center',
                       gap: '0.4rem',
-                      color: 'var(--gold-light)',
-                      fontSize: '0.78rem'
+                      color: 'var(--text-gold)',
+                      fontSize: '0.78rem',
+                      fontWeight: 600
                     }}
                   >
                     <ShieldCheck size={14} style={{ color: 'var(--gold-primary)', flexShrink: 0 }} />
@@ -473,14 +477,14 @@ export default function TechProductsSection({ onAddToRfq, rfqItems, onOpenRfq })
                     justifyContent: 'space-between',
                     marginTop: 'auto',
                     paddingTop: '1rem',
-                    borderTop: '1px solid rgba(212, 175, 55, 0.15)'
+                    borderTop: '1px solid rgba(184, 134, 11, 0.15)'
                   }}
                 >
                   <div>
                     <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)', textTransform: 'uppercase' }}>
                       Pricing Tier
                     </div>
-                    <div style={{ fontSize: '1.25rem', fontWeight: 800, color: '#FFF', fontFamily: 'var(--font-heading)' }}>
+                    <div style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--text-primary)', fontFamily: 'var(--font-heading)' }}>
                       {product.priceEstimate} <span style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', fontWeight: 400 }}>/ unit</span>
                     </div>
                   </div>

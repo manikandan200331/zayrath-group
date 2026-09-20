@@ -23,8 +23,8 @@ export default function SoftwareSolutionsPage({ setActiveView, onOpenConsultatio
       {/* Top Page Breadcrumbs & Subsidiary Navigation Bar */}
       <div 
         style={{
-          background: 'rgba(10, 13, 19, 0.95)',
-          borderBottom: '1px solid rgba(212, 175, 55, 0.2)',
+          background: '#F8FAFC',
+          borderBottom: '1px solid rgba(184, 134, 11, 0.2)',
           padding: '0.85rem 0'
         }}
       >
@@ -39,7 +39,7 @@ export default function SoftwareSolutionsPage({ setActiveView, onOpenConsultatio
               gap: '0.5rem',
               background: 'none',
               border: 'none',
-              color: 'var(--gold-light)',
+              color: 'var(--text-gold)',
               fontFamily: 'var(--font-heading)',
               fontWeight: 700,
               fontSize: '0.9rem',
@@ -48,7 +48,7 @@ export default function SoftwareSolutionsPage({ setActiveView, onOpenConsultatio
               borderRadius: '6px',
               transition: 'background 0.2s'
             }}
-            onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(212, 175, 55, 0.12)'}
+            onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(184, 134, 11, 0.08)'}
             onMouseLeave={(e) => e.currentTarget.style.background = 'none'}
           >
             <ArrowLeft size={16} />
@@ -62,24 +62,25 @@ export default function SoftwareSolutionsPage({ setActiveView, onOpenConsultatio
               display: 'inline-flex',
               alignItems: 'center',
               gap: '0.5rem',
-              background: 'rgba(212, 175, 55, 0.1)',
-              border: '1px solid rgba(212, 175, 55, 0.3)',
-              color: '#FFF',
+              background: '#FFFFFF',
+              border: '1px solid rgba(184, 134, 11, 0.3)',
+              color: 'var(--text-primary)',
               fontFamily: 'var(--font-heading)',
-              fontWeight: 600,
+              fontWeight: 700,
               fontSize: '0.86rem',
               cursor: 'pointer',
               padding: '0.45rem 1rem',
               borderRadius: '8px',
+              boxShadow: '0 2px 8px rgba(15, 23, 42, 0.04)',
               transition: 'all 0.2s'
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.background = 'rgba(212, 175, 55, 0.2)';
+              e.currentTarget.style.background = 'rgba(184, 134, 11, 0.08)';
               e.currentTarget.style.borderColor = 'var(--gold-primary)';
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.background = 'rgba(212, 175, 55, 0.1)';
-              e.currentTarget.style.borderColor = 'rgba(212, 175, 55, 0.3)';
+              e.currentTarget.style.background = '#FFFFFF';
+              e.currentTarget.style.borderColor = 'rgba(184, 134, 11, 0.3)';
             }}
           >
             <span>Switch to Zayrath Tech Systems (IT Products)</span>
@@ -94,8 +95,8 @@ export default function SoftwareSolutionsPage({ setActiveView, onOpenConsultatio
         style={{
           position: 'relative',
           padding: '4.5rem 0 3.5rem',
-          background: 'linear-gradient(180deg, rgba(14, 18, 27, 0.95) 0%, rgba(8, 10, 15, 0.98) 100%)',
-          borderBottom: '1px solid rgba(212, 175, 55, 0.2)'
+          background: '#FFFFFF',
+          borderBottom: '1px solid rgba(184, 134, 11, 0.2)'
         }}
       >
         <div className="container">
@@ -106,7 +107,7 @@ export default function SoftwareSolutionsPage({ setActiveView, onOpenConsultatio
                 <span>Subsidiary 02 • Enterprise Digital & AI Engineering</span>
               </div>
 
-              <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: '3rem', color: '#FFF', fontWeight: 800, lineHeight: 1.15, marginBottom: '1rem' }}>
+              <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: '3rem', color: 'var(--text-primary)', fontWeight: 800, lineHeight: 1.15, marginBottom: '1rem' }}>
                 Zayrath Software Solutions <br />
                 <span className="text-gold-gradient">Custom Enterprise AI & Cloud</span>
               </h1>
@@ -176,7 +177,7 @@ export default function SoftwareSolutionsPage({ setActiveView, onOpenConsultatio
       />
 
       {/* Software Architecture & Engineering Standards */}
-      <section className="section-padding" style={{ background: 'rgba(10, 13, 19, 0.8)', borderTop: '1px solid rgba(212, 175, 55, 0.15)' }}>
+      <section className="section-padding" style={{ background: '#F8FAFC', borderTop: '1px solid rgba(184, 134, 11, 0.15)' }}>
         <div className="container">
           <div className="section-header">
             <div className="badge-gold section-tag">
@@ -191,11 +192,11 @@ export default function SoftwareSolutionsPage({ setActiveView, onOpenConsultatio
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1.5rem' }} className="lifecycle-grid">
             
-            <div className="glass-card" style={{ padding: '1.75rem', textAlign: 'center' }}>
-              <div style={{ fontSize: '0.8rem', color: 'var(--gold-light)', fontWeight: 800, textTransform: 'uppercase', marginBottom: '0.5rem' }}>
+            <div className="glass-card" style={{ padding: '1.75rem', textAlign: 'center', background: '#FFFFFF', border: '1px solid rgba(184, 134, 11, 0.2)', boxShadow: '0 4px 20px rgba(15, 23, 42, 0.05)' }}>
+              <div style={{ fontSize: '0.8rem', color: 'var(--text-gold)', fontWeight: 800, textTransform: 'uppercase', marginBottom: '0.5rem' }}>
                 Phase 01
               </div>
-              <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.15rem', color: '#FFF', fontWeight: 700, marginBottom: '0.75rem' }}>
+              <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.15rem', color: 'var(--text-primary)', fontWeight: 700, marginBottom: '0.75rem' }}>
                 Domain Discovery & Architecture
               </h3>
               <p style={{ color: 'var(--text-secondary)', fontSize: '0.84rem', lineHeight: 1.6 }}>
@@ -203,11 +204,11 @@ export default function SoftwareSolutionsPage({ setActiveView, onOpenConsultatio
               </p>
             </div>
 
-            <div className="glass-card" style={{ padding: '1.75rem', textAlign: 'center' }}>
-              <div style={{ fontSize: '0.8rem', color: 'var(--gold-light)', fontWeight: 800, textTransform: 'uppercase', marginBottom: '0.5rem' }}>
+            <div className="glass-card" style={{ padding: '1.75rem', textAlign: 'center', background: '#FFFFFF', border: '1px solid rgba(184, 134, 11, 0.2)', boxShadow: '0 4px 20px rgba(15, 23, 42, 0.05)' }}>
+              <div style={{ fontSize: '0.8rem', color: 'var(--text-gold)', fontWeight: 800, textTransform: 'uppercase', marginBottom: '0.5rem' }}>
                 Phase 02
               </div>
-              <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.15rem', color: '#FFF', fontWeight: 700, marginBottom: '0.75rem' }}>
+              <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.15rem', color: 'var(--text-primary)', fontWeight: 700, marginBottom: '0.75rem' }}>
                 Agile Squad Execution
               </h3>
               <p style={{ color: 'var(--text-secondary)', fontSize: '0.84rem', lineHeight: 1.6 }}>
@@ -215,11 +216,11 @@ export default function SoftwareSolutionsPage({ setActiveView, onOpenConsultatio
               </p>
             </div>
 
-            <div className="glass-card" style={{ padding: '1.75rem', textAlign: 'center' }}>
-              <div style={{ fontSize: '0.8rem', color: 'var(--gold-light)', fontWeight: 800, textTransform: 'uppercase', marginBottom: '0.5rem' }}>
+            <div className="glass-card" style={{ padding: '1.75rem', textAlign: 'center', background: '#FFFFFF', border: '1px solid rgba(184, 134, 11, 0.2)', boxShadow: '0 4px 20px rgba(15, 23, 42, 0.05)' }}>
+              <div style={{ fontSize: '0.8rem', color: 'var(--text-gold)', fontWeight: 800, textTransform: 'uppercase', marginBottom: '0.5rem' }}>
                 Phase 03
               </div>
-              <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.15rem', color: '#FFF', fontWeight: 700, marginBottom: '0.75rem' }}>
+              <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.15rem', color: 'var(--text-primary)', fontWeight: 700, marginBottom: '0.75rem' }}>
                 Zero-Trust Hardening
               </h3>
               <p style={{ color: 'var(--text-secondary)', fontSize: '0.84rem', lineHeight: 1.6 }}>
@@ -227,11 +228,11 @@ export default function SoftwareSolutionsPage({ setActiveView, onOpenConsultatio
               </p>
             </div>
 
-            <div className="glass-card" style={{ padding: '1.75rem', textAlign: 'center' }}>
-              <div style={{ fontSize: '0.8rem', color: 'var(--gold-light)', fontWeight: 800, textTransform: 'uppercase', marginBottom: '0.5rem' }}>
+            <div className="glass-card" style={{ padding: '1.75rem', textAlign: 'center', background: '#FFFFFF', border: '1px solid rgba(184, 134, 11, 0.2)', boxShadow: '0 4px 20px rgba(15, 23, 42, 0.05)' }}>
+              <div style={{ fontSize: '0.8rem', color: 'var(--text-gold)', fontWeight: 800, textTransform: 'uppercase', marginBottom: '0.5rem' }}>
                 Phase 04
               </div>
-              <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.15rem', color: '#FFF', fontWeight: 700, marginBottom: '0.75rem' }}>
+              <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.15rem', color: 'var(--text-primary)', fontWeight: 700, marginBottom: '0.75rem' }}>
                 Global Multi-Region Launch
               </h3>
               <p style={{ color: 'var(--text-secondary)', fontSize: '0.84rem', lineHeight: 1.6 }}>
