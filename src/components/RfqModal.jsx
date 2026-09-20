@@ -16,6 +16,7 @@ import {
   User,
   Sparkles
 } from 'lucide-react';
+import logoImg from '../assets/zayrath-logo.jpg';
 
 export default function RfqModal({ isOpen, onClose, rfqItems, onUpdateQty, onRemoveItem, defaultTab = 'hardware' }) {
   const [activeTab, setActiveTab] = useState(defaultTab);
@@ -161,7 +162,7 @@ export default function RfqModal({ isOpen, onClose, rfqItems, onUpdateQty, onRem
                   border: '1px solid rgba(212, 175, 55, 0.4)'
                 }}
               >
-                <img src="/zayrath-logo.jpg" alt="Zayrath Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src={logoImg} alt="Zayrath Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <div>
                 <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.6rem', color: '#FFF', fontWeight: 800 }}>

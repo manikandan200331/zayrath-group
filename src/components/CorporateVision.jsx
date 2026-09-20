@@ -10,6 +10,7 @@ import {
   Target,
   Sparkles
 } from 'lucide-react';
+import hqImg from '../assets/headquarters.jpg';
 
 export default function CorporateVision() {
   const globalHubs = [
@@ -57,7 +58,7 @@ export default function CorporateVision() {
         >
           <div style={{ position: 'relative', height: '380px' }}>
             <img 
-              src="/assets/headquarters.jpg" 
+              src={hqImg} 
               alt="Zayrath Group Global Headquarters"
               style={{ width: '100%', height: '100%', objectFit: 'cover' }}
             />

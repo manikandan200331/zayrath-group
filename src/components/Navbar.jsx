@@ -13,6 +13,7 @@ import {
   Cpu,
   Layers
 } from 'lucide-react';
+import logoImg from '../assets/zayrath-logo.jpg';
 
 export default function Navbar({ activeView, setActiveView, onOpenRfq, rfqCount }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -112,7 +113,7 @@ export default function Navbar({ activeView, setActiveView, onOpenRfq, rfqCount 
             }}
           >
             <img 
-              src="/zayrath-logo.jpg" 
+              src={logoImg} 
               alt="Zayrath Group Logo" 
               style={{ width: '100%', height: '100%', objectFit: 'cover' }}
             />

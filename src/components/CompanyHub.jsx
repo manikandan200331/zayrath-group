@@ -13,6 +13,8 @@ import {
   Layers,
   Sparkles
 } from 'lucide-react';
+import datacenterImg from '../assets/datacenter.jpg';
+import softwareAiImg from '../assets/software_ai.jpg';
 
 export default function CompanyHub({ activeView, setActiveView, onOpenRfq }) {
   const [selectedSubTab, setSelectedSubTab] = useState('both'); // 'both' | 'hardware' | 'software'
@@ -135,7 +137,7 @@ export default function CompanyHub({ activeView, setActiveView, onOpenRfq }) {
               {/* Card Banner Image */}
               <div style={{ position: 'relative', height: '240px', overflow: 'hidden' }}>
                 <img 
-                  src="/assets/datacenter.jpg" 
+                  src={datacenterImg} 
                   alt="Zayrath Tech Systems Data Center & Servers"
                   style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease' }}
                   onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
@@ -236,7 +238,7 @@ export default function CompanyHub({ activeView, setActiveView, onOpenRfq }) {
               {/* Card Banner Image */}
               <div style={{ position: 'relative', height: '240px', overflow: 'hidden' }}>
                 <img 
-                  src="/assets/software_ai.jpg" 
+                  src={softwareAiImg} 
                   alt="Zayrath Software Solutions Enterprise Architecture"
                   style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease' }}
                   onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}

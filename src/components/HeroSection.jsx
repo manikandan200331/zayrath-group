@@ -9,6 +9,7 @@ import {
   Sparkles,
   ChevronRight
 } from 'lucide-react';
+import logoImg from '../assets/zayrath-logo.jpg';
 
 export default function HeroSection({ setActiveView, onOpenRfq }) {
   return (
@@ -169,7 +170,7 @@ export default function HeroSection({ setActiveView, onOpenRfq }) {
                   }}
                 >
                   <img 
-                    src="/zayrath-logo.jpg" 
+                    src={logoImg} 
                     alt="Zayrath Group Official Emblem" 
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   />

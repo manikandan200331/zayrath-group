@@ -14,6 +14,7 @@ import {
   Cpu,
   Layers
 } from 'lucide-react';
+import softwareAiImg from '../assets/software_ai.jpg';
 
 export default function SoftwareSolutionsPage({ setActiveView, onOpenConsultation }) {
   return (
@@ -149,7 +150,7 @@ export default function SoftwareSolutionsPage({ setActiveView, onOpenConsultatio
               }}
             >
               <img 
-                src="/assets/software_ai.jpg" 
+                src={softwareAiImg} 
                 alt="Zayrath Software Solutions AI Interface" 
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />

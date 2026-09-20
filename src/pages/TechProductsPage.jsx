@@ -13,6 +13,7 @@ import {
   HelpCircle,
   FileCheck
 } from 'lucide-react';
+import datacenterImg from '../assets/datacenter.jpg';
 
 export default function TechProductsPage({ setActiveView, onAddToRfq, rfqItems, onOpenRfq }) {
   return (
@@ -148,7 +149,7 @@ export default function TechProductsPage({ setActiveView, onAddToRfq, rfqItems, 
               }}
             >
               <img 
-                src="/assets/datacenter.jpg" 
+                src={datacenterImg} 
                 alt="Zayrath Data Center Hardware" 
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />

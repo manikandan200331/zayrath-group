@@ -11,6 +11,7 @@ import {
   ShieldCheck, 
   Globe2 
 } from 'lucide-react';
+import logoImg from '../assets/zayrath-logo.jpg';
 
 export default function Footer({ setActiveView, onOpenRfq }) {
   const [email, setEmail] = useState('');
@@ -65,7 +66,7 @@ export default function Footer({ setActiveView, onOpenRfq }) {
                 }}
               >
                 <img 
-                  src="/zayrath-logo.jpg" 
+                  src={logoImg} 
                   alt="Zayrath Group Logo" 
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
