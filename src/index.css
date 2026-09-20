@@ -1,0 +1,349 @@
+/* ==========================================================================
+   ZAYRATH GROUP - LUXURY OBSIDIAN & 24K GOLD DESIGN SYSTEM
+   ========================================================================== */
+
+:root {
+  /* Color Palette - Direct Match to Zayrath Group Brand Logo */
+  --bg-deep: #060709;
+  --bg-obsidian: #0A0C10;
+  --bg-surface: #10131B;
+  --bg-card: rgba(16, 20, 29, 0.72);
+  --bg-card-hover: rgba(22, 28, 41, 0.85);
+  --bg-glass: rgba(12, 15, 22, 0.82);
+  
+  /* Metallic Gold Palette */
+  --gold-primary: #D4AF37;
+  --gold-light: #F7E599;
+  --gold-mid: #E6C15B;
+  --gold-deep: #9E7B1D;
+  --gold-dark: #634C0F;
+  --gold-glow: rgba(212, 175, 55, 0.28);
+  --gold-glow-intense: rgba(212, 175, 55, 0.6);
+  
+  /* Borders */
+  --border-subtle: rgba(255, 255, 255, 0.07);
+  --border-gold: rgba(212, 175, 55, 0.25);
+  --border-gold-bright: rgba(247, 229, 153, 0.6);
+  
+  /* Text */
+  --text-primary: #F3F4F6;
+  --text-secondary: #A0AEC0;
+  --text-muted: #6B7280;
+  --text-gold: #F5DE88;
+
+  /* Gradients */
+  --gold-gradient: linear-gradient(135deg, #FFF3C4 0%, #D4AF37 32%, #A88114 68%, #F7E498 100%);
+  --gold-gradient-text: linear-gradient(135deg, #FFF9D2 0%, #E6C15B 35%, #B88E1C 75%, #FFF0AA 100%);
+  --gold-gradient-dark: linear-gradient(180deg, rgba(212, 175, 55, 0.15) 0%, rgba(10, 12, 16, 0.9) 100%);
+  --gold-border-gradient: linear-gradient(90deg, transparent, #D4AF37, transparent);
+
+  /* Typography */
+  --font-serif: 'Cinzel', Georgia, serif;
+  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Shadows */
+  --shadow-card: 0 12px 36px -8px rgba(0, 0, 0, 0.75), 0 0 24px rgba(212, 175, 55, 0.05);
+  --shadow-gold: 0 0 25px rgba(212, 175, 55, 0.35);
+  --shadow-glow: 0 0 45px rgba(212, 175, 55, 0.18);
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Base Resets */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--bg-deep);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Luxury Gold Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-deep);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #634C0F 0%, #D4AF37 50%, #634C0F 100%);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F7E599;
+}
+
+/* Typography Utilities */
+.font-serif {
+  font-family: var(--font-serif);
+  letter-spacing: 0.04em;
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.text-gold-gradient {
+  background: var(--gold-gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.text-gold {
+  color: var(--gold-primary);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+/* Layout Utilities */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section-padding {
+  padding: 6rem 0;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 4rem 0;
+  }
+}
+
+/* Luxury Glassmorphic Card */
+.glass-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-gold);
+  border-radius: 16px;
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(247, 229, 153, 0.4), transparent);
+  pointer-events: none;
+}
+
+.glass-card:hover {
+  border-color: var(--border-gold-bright);
+  transform: translateY(-4px);
+  box-shadow: 0 18px 42px -10px rgba(0, 0, 0, 0.85), 0 0 30px rgba(212, 175, 55, 0.15);
+}
+
+/* Luxury Gold Button Primary */
+.btn-gold-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: var(--gold-gradient);
+  color: #0B0D11;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.85rem 1.85rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.35);
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.btn-gold-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.55);
+  filter: brightness(1.08);
+}
+
+.btn-gold-primary:active {
+  transform: translateY(0);
+}
+
+/* Secondary Luxury Outline Button */
+.btn-gold-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: rgba(16, 20, 28, 0.6);
+  backdrop-filter: blur(12px);
+  color: var(--gold-light);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  padding: 0.85rem 1.85rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-gold);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.btn-gold-outline:hover {
+  background: rgba(212, 175, 55, 0.12);
+  border-color: var(--gold-primary);
+  color: #FFF;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(212, 175, 55, 0.2);
+}
+
+/* Badge / Pills */
+.badge-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+}
+
+.badge-glow {
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.25);
+}
+
+/* Section Header standard */
+.section-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.section-header .section-tag {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+}
+
+.section-header .section-title {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .section-header .section-title {
+    font-size: 1.85rem;
+  }
+}
+
+.section-header .section-desc {
+  max-width: 680px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+}
+
+/* Ambient Radial Glows */
+.gold-glow-orb {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.12) 0%, rgba(8, 9, 12, 0) 70%);
+  pointer-events: none;
+  filter: blur(40px);
+  z-index: 0;
+}
+
+/* Metallic Divider */
+.gold-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.4), transparent);
+  margin: 3rem 0;
+}
+
+/* Modal Backdrop */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 5, 8, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+/* Animations */
+@keyframes goldPulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+  }
+}
+
+.animate-gold-pulse {
+  animation: goldPulse 3s infinite ease-in-out;
+}
+
+@keyframes shimmerEffect {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer-text {
+  background: linear-gradient(90deg, #F5DE88 0%, #FFFDF5 50%, #F5DE88 100%);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  animation: shimmerEffect 4s linear infinite;
+}
