@@ -347,3 +347,101 @@ body {
   -webkit-background-clip: text;
   animation: shimmerEffect 4s linear infinite;
 }
+
+/* ==========================================================================
+   MOBILE & LAPTOP RESPONSIVE DESIGN SYSTEM
+   ========================================================================== */
+
+/* Mobile Phones (<= 640px) */
+@media (max-width: 640px) {
+  .container {
+    padding: 0 1rem !important;
+  }
+
+  .section-padding {
+    padding: 3.5rem 0 !important;
+  }
+
+  .section-header {
+    margin-bottom: 2rem !important;
+  }
+
+  .section-header .section-title {
+    font-size: 1.55rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .section-header .section-desc {
+    font-size: 0.9rem !important;
+  }
+
+  .btn-gold-primary, .btn-gold-outline {
+    width: 100% !important;
+    padding: 0.8rem 1.2rem !important;
+    font-size: 0.88rem !important;
+  }
+
+  .modal-backdrop {
+    padding: 0.75rem !important;
+  }
+
+  .glass-card {
+    border-radius: 12px !important;
+  }
+
+  .responsive-modal-card {
+    padding: 1.5rem 1.15rem !important;
+  }
+
+  .top-corporate-ticker {
+    display: none !important;
+  }
+
+  /* Responsive 2-column form grids collapse to 1 column */
+  .responsive-form-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+  }
+}
+
+.responsive-modal-card {
+  padding: 2.5rem;
+}
+
+/* Tablets (641px - 1024px) */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .container {
+    padding: 0 1.5rem !important;
+  }
+
+  .section-padding {
+    padding: 4.5rem 0 !important;
+  }
+
+  .section-header .section-title {
+    font-size: 2rem !important;
+  }
+}
+
+/* Laptops & Standard Desktops (1025px - 1440px) */
+@media (min-width: 1025px) {
+  .container {
+    max-width: 1240px !important;
+    padding: 0 2rem !important;
+  }
+
+  .section-padding {
+    padding: 6rem 0 !important;
+  }
+
+  .section-header .section-title {
+    font-size: 2.6rem !important;
+  }
+}
+
+/* Ultra-Wide Screens (>= 1441px) */
+@media (min-width: 1441px) {
+  .container {
+    max-width: 1360px !important;
+  }
+}

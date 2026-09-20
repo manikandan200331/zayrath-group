@@ -61,6 +61,7 @@ export default function Navbar({ activeView, setActiveView, onOpenRfq, rfqCount 
     >
       {/* Top Corporate Ticker Bar */}
       <div 
+        className="top-corporate-ticker"
         style={{
           borderBottom: '1px solid rgba(212, 175, 55, 0.12)',
           background: 'rgba(10, 13, 19, 0.8)',

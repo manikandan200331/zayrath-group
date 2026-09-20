@@ -47,14 +47,13 @@ export default function RfqModal({ isOpen, onClose, rfqItems, onUpdateQty, onRem
   return (
     <div className="modal-backdrop" onClick={onClose}>
       <div 
-        className="glass-card"
+        className="glass-card responsive-modal-card"
         onClick={(e) => e.stopPropagation()}
         style={{
           width: '100%',
           maxWidth: '750px',
           maxHeight: '90vh',
           overflowY: 'auto',
-          padding: '2.5rem',
           background: 'linear-gradient(145deg, rgba(16, 21, 30, 0.98) 0%, rgba(8, 10, 15, 0.99) 100%)',
           border: '1px solid rgba(212, 175, 55, 0.45)',
           boxShadow: '0 25px 70px rgba(0, 0, 0, 0.9), 0 0 40px rgba(212, 175, 55, 0.25)',
@@ -319,7 +318,7 @@ export default function RfqModal({ isOpen, onClose, rfqItems, onUpdateQty, onRem
 
             {/* Enterprise Form */}
             <form onSubmit={handleSubmit}>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1rem' }}>
+              <div className="responsive-form-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1rem' }}>
                 <div>
                   <label style={{ display: 'block', fontSize: '0.78rem', color: 'var(--text-secondary)', textTransform: 'uppercase', marginBottom: '0.35rem' }}>
                     Full Name / Designation *
@@ -373,7 +372,7 @@ export default function RfqModal({ isOpen, onClose, rfqItems, onUpdateQty, onRem
                 </div>
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1rem' }}>
+              <div className="responsive-form-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1rem' }}>
                 <div>
                   <label style={{ display: 'block', fontSize: '0.78rem', color: 'var(--text-secondary)', textTransform: 'uppercase', marginBottom: '0.35rem' }}>
                     Corporate Email Address *
