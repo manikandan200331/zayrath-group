@@ -10,7 +10,7 @@ import {
   ChevronRight,
   Globe2
 } from 'lucide-react';
-import iconImg from '../assets/zayrath-icon.jpg';
+import BrandLogo from './BrandLogo';
 
 export default function HeroSection({ setActiveView, onOpenRfq }) {
   return (
@@ -186,11 +186,7 @@ export default function HeroSection({ setActiveView, onOpenRfq }) {
                     padding: '6px'
                   }}
                 >
-                  <img 
-                    src={iconImg} 
-                    alt="Zayrath Group Emblem" 
-                    style={{ width: '100%', height: '100%', objectFit: 'contain' }}
-                  />
+                  <BrandLogo size="100%" alt="Zayrath Group Emblem" />
                 </div>
               </div>
 

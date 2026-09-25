@@ -34,6 +34,10 @@
   RewriteCond %{DOCUMENT_ROOT}/assets\\$1 -f
   RewriteRule ^assets/(.*)$ /assets\\$1 [L]
 
+  # Prevent missing static files from returning index.html (avoids CDN 422 image optimizer errors)
+  RewriteCond %{REQUEST_URI} \.(jpg|jpeg|png|gif|svg|webp|ico|css|js|woff2?|map)$ [NC]
+  RewriteRule ^ - [R=404,L]
+
   # All other routes go to index.html for React Router / SPA navigation
   RewriteRule . /index.html [L]
 </IfModule>

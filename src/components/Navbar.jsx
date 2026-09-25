@@ -14,7 +14,7 @@ import {
   Layers,
   Sparkles
 } from 'lucide-react';
-import iconImg from '../assets/zayrath-icon.jpg';
+import BrandLogo from './BrandLogo';
 
 export default function Navbar({ activeView, setActiveView, onOpenRfq, rfqCount }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -116,11 +116,7 @@ export default function Navbar({ activeView, setActiveView, onOpenRfq, rfqCount 
             }}
             className="navbar-brand-badge"
           >
-            <img 
-              src={iconImg} 
-              alt="Zayrath Group Emblem" 
-              style={{ width: '100%', height: '100%', objectFit: 'contain' }}
-            />
+            <BrandLogo size="100%" alt="Zayrath Group Emblem" />
           </div>
 
           <div>

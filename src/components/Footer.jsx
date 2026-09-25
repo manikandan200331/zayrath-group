@@ -11,7 +11,7 @@ import {
   ShieldCheck, 
   Globe2 
 } from 'lucide-react';
-import iconImg from '../assets/zayrath-icon.jpg';
+import BrandLogo from './BrandLogo';
 
 export default function Footer({ setActiveView, onOpenRfq }) {
   const [email, setEmail] = useState('');
@@ -68,11 +68,7 @@ export default function Footer({ setActiveView, onOpenRfq }) {
                   flexShrink: 0
                 }}
               >
-                <img 
-                  src={iconImg} 
-                  alt="Zayrath Group Emblem" 
-                  style={{ width: '100%', height: '100%', objectFit: 'contain' }}
-                />
+                <BrandLogo size="100%" alt="Zayrath Group Emblem" />
               </div>
               <div>
                 <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.35rem', fontWeight: 900, background: 'var(--gold-gradient-text)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', letterSpacing: '0.04em', lineHeight: 1 }}>
