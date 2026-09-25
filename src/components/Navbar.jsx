@@ -11,9 +11,10 @@ import {
   Globe2, 
   ShieldCheck,
   Cpu,
-  Layers
+  Layers,
+  Sparkles
 } from 'lucide-react';
-import logoImg from '../assets/zayrath-logo.jpg';
+import iconImg from '../assets/zayrath-icon.jpg';
 
 export default function Navbar({ activeView, setActiveView, onOpenRfq, rfqCount }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -22,7 +23,7 @@ export default function Navbar({ activeView, setActiveView, onOpenRfq, rfqCount 
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 40);
+      setIsScrolled(window.scrollY > 30);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -50,53 +51,53 @@ export default function Navbar({ activeView, setActiveView, onOpenRfq, rfqCount 
         left: 0,
         right: 0,
         zIndex: 1000,
-        transition: 'all 0.35s ease',
+        transition: 'all 0.3s ease',
         background: isScrolled 
-          ? 'rgba(255, 255, 255, 0.95)' 
-          : 'rgba(255, 255, 255, 0.9)',
+          ? 'rgba(255, 255, 255, 0.97)' 
+          : 'rgba(255, 255, 255, 0.93)',
         backdropFilter: 'blur(16px)',
-        borderBottom: '1px solid rgba(184, 134, 11, 0.25)',
-        boxShadow: isScrolled ? '0 8px 30px rgba(15, 23, 42, 0.08)' : 'none'
+        borderBottom: '1px solid var(--border-gold)',
+        boxShadow: isScrolled ? '0 6px 25px rgba(10, 88, 202, 0.08)' : 'none'
       }}
     >
       {/* Top Corporate Ticker Bar */}
       <div 
         className="top-corporate-ticker"
         style={{
-          borderBottom: '1px solid rgba(15, 23, 42, 0.08)',
+          borderBottom: '1px solid rgba(15, 23, 42, 0.06)',
           background: '#F8FAFC',
-          fontSize: '0.75rem',
-          padding: '0.35rem 0',
+          fontSize: '0.72rem',
+          padding: '0.3rem 0',
           color: 'var(--text-secondary)'
         }}
       >
         <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
-            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.35rem', color: 'var(--gold-light)' }}>
-              <Globe2 size={13} /> Global Conglomerate HQ & Innovation Hubs
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.35rem', color: 'var(--brand-primary)', fontWeight: 600 }}>
+              <Globe2 size={12} /> Global Vision • Greater Tomorrows
             </span>
-            <span style={{ display: 'none', md: 'inline', opacity: 0.6 }}>|</span>
+            <span style={{ opacity: 0.35 }}>|</span>
             <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}>
-              <ShieldCheck size={13} style={{ color: 'var(--gold-primary)' }} /> ISO 9001 & 27001 Certified Enterprise Quality
+              <ShieldCheck size={12} style={{ color: 'var(--brand-primary)' }} /> ISO 9001 & 27001 Certified
             </span>
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-            <span style={{ color: 'var(--gold-light)' }}>24/7 Corporate Desk: +91 44 8200 9000</span>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
+            <span style={{ color: 'var(--text-secondary)', fontWeight: 500 }}>Enterprise Desk: +91 44 8200 9000</span>
           </div>
         </div>
       </div>
 
       {/* Main Navbar */}
-      <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0.85rem 1.5rem' }}>
+      <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0.65rem clamp(1rem, 2vw, 1.5rem)' }}>
         
-        {/* Brand Logo & Slogan */}
+        {/* Brand Logo & Title */}
         <div 
           onClick={() => handleNavClick('group', null)}
           style={{ 
             display: 'flex', 
             alignItems: 'center', 
-            gap: '1rem', 
+            gap: '0.75rem', 
             cursor: 'pointer',
             userSelect: 'none'
           }}
@@ -104,41 +105,43 @@ export default function Navbar({ activeView, setActiveView, onOpenRfq, rfqCount 
           <div 
             style={{
               position: 'relative',
-              width: '52px',
-              height: '52px',
+              width: '44px',
+              height: '44px',
               borderRadius: '10px',
               overflow: 'hidden',
-              border: '1.5px solid rgba(184, 134, 11, 0.35)',
-              boxShadow: '0 2px 10px rgba(184, 134, 11, 0.2)',
-              background: '#FFFFFF'
+              border: '1.5px solid var(--border-gold)',
+              boxShadow: '0 2px 10px rgba(10, 88, 202, 0.15)',
+              background: '#FFFFFF',
+              flexShrink: 0
             }}
+            className="navbar-brand-badge"
           >
             <img 
-              src={logoImg} 
-              alt="Zayrath Group Logo" 
-              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              src={iconImg} 
+              alt="Zayrath Group Emblem" 
+              style={{ width: '100%', height: '100%', objectFit: 'contain' }}
             />
           </div>
 
           <div>
             <div style={{ 
-              fontFamily: 'var(--font-serif)', 
-              fontSize: '1.45rem', 
-              fontWeight: 800, 
-              lineHeight: 1.1,
-              letterSpacing: '0.08em',
+              fontFamily: 'var(--font-heading)', 
+              fontSize: '1.38rem', 
+              fontWeight: 900, 
+              lineHeight: 1.05,
+              letterSpacing: '0.05em',
               background: 'var(--gold-gradient-text)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent'
-            }}>
+            }} className="navbar-brand-title">
               ZAYRATH
             </div>
             <div style={{ 
               fontFamily: 'var(--font-heading)', 
-              fontSize: '0.68rem', 
+              fontSize: '0.62rem', 
               fontWeight: 800, 
               letterSpacing: '0.35em', 
-              color: 'var(--text-gold)',
+              color: 'var(--text-secondary)',
               textTransform: 'uppercase'
             }}>
               G R O U P
@@ -147,26 +150,27 @@ export default function Navbar({ activeView, setActiveView, onOpenRfq, rfqCount 
         </div>
 
         {/* Desktop Navigation Links */}
-        <nav style={{ display: 'flex', alignItems: 'center', gap: '1.75rem' }} className="desktop-nav">
+        <nav style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }} className="desktop-nav">
           <button
             onClick={() => handleNavClick('group', null)}
             style={{
               background: 'none',
               border: 'none',
-              color: activeView === 'group' ? 'var(--text-gold)' : 'var(--text-primary)',
+              color: activeView === 'group' ? 'var(--brand-primary)' : 'var(--text-primary)',
               fontFamily: 'var(--font-heading)',
-              fontSize: '0.92rem',
+              fontSize: '0.88rem',
               fontWeight: activeView === 'group' ? 800 : 600,
               cursor: 'pointer',
               display: 'flex',
               alignItems: 'center',
-              gap: '0.4rem',
-              padding: '0.5rem 0',
-              borderBottom: activeView === 'group' ? '2px solid var(--gold-primary)' : '2px solid transparent',
-              transition: 'all 0.2s ease'
+              gap: '0.35rem',
+              padding: '0.45rem 0',
+              borderBottom: activeView === 'group' ? '2px solid var(--brand-primary)' : '2px solid transparent',
+              transition: 'all 0.2s ease',
+              whiteSpace: 'nowrap'
             }}
           >
-            <Building2 size={16} style={{ color: activeView === 'group' ? 'var(--gold-primary)' : 'var(--text-muted)' }} />
+            <Building2 size={15} style={{ color: activeView === 'group' ? 'var(--brand-primary)' : 'var(--text-muted)' }} />
             Group Home
           </button>
 
@@ -179,24 +183,25 @@ export default function Navbar({ activeView, setActiveView, onOpenRfq, rfqCount 
             <button
               onClick={() => setIsCompaniesOpen(!isCompaniesOpen)}
               style={{
-                background: (activeView === 'hardware' || activeView === 'software') ? 'rgba(184, 134, 11, 0.1)' : 'none',
-                border: (activeView === 'hardware' || activeView === 'software') ? '1px solid rgba(184, 134, 11, 0.3)' : '1px solid transparent',
+                background: (activeView === 'hardware' || activeView === 'software') ? 'rgba(10, 88, 202, 0.08)' : 'none',
+                border: (activeView === 'hardware' || activeView === 'software') ? '1px solid rgba(10, 88, 202, 0.25)' : '1px solid transparent',
                 borderRadius: '6px',
-                color: (activeView === 'hardware' || activeView === 'software') ? 'var(--text-gold)' : 'var(--text-primary)',
+                color: (activeView === 'hardware' || activeView === 'software') ? 'var(--brand-primary)' : 'var(--text-primary)',
                 fontFamily: 'var(--font-heading)',
-                fontSize: '0.92rem',
+                fontSize: '0.88rem',
                 fontWeight: 600,
                 cursor: 'pointer',
                 display: 'flex',
                 alignItems: 'center',
-                gap: '0.45rem',
-                padding: '0.5rem 0.85rem',
-                transition: 'all 0.2s ease'
+                gap: '0.35rem',
+                padding: '0.45rem 0.75rem',
+                transition: 'all 0.2s ease',
+                whiteSpace: 'nowrap'
               }}
             >
-              <Layers size={16} style={{ color: 'var(--gold-primary)' }} />
+              <Layers size={15} style={{ color: 'var(--brand-primary)' }} />
               Companies
-              <ChevronDown size={14} style={{ transform: isCompaniesOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }} />
+              <ChevronDown size={13} style={{ transform: isCompaniesOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }} />
             </button>
 
             {isCompaniesOpen && (
@@ -205,18 +210,18 @@ export default function Navbar({ activeView, setActiveView, onOpenRfq, rfqCount 
                   position: 'absolute',
                   top: '100%',
                   left: '-15px',
-                  width: '320px',
+                  width: '310px',
                   background: 'rgba(255, 255, 255, 0.98)',
-                  border: '1px solid rgba(184, 134, 11, 0.35)',
+                  border: '1px solid var(--border-gold)',
                   backdropFilter: 'blur(20px)',
                   borderRadius: '12px',
-                  padding: '0.75rem',
-                  boxShadow: '0 16px 40px rgba(15, 23, 42, 0.12), 0 0 25px rgba(184, 134, 11, 0.1)',
+                  padding: '0.65rem',
+                  boxShadow: '0 16px 40px rgba(10, 88, 202, 0.12), 0 0 25px rgba(10, 88, 202, 0.08)',
                   zIndex: 1100,
                   animation: 'fadeIn 0.2s ease'
                 }}
               >
-                <div style={{ fontSize: '0.7rem', color: 'var(--gold-light)', textTransform: 'uppercase', letterSpacing: '0.08em', padding: '0.4rem 0.75rem', fontWeight: 700 }}>
+                <div style={{ fontSize: '0.68rem', color: 'var(--brand-primary)', textTransform: 'uppercase', letterSpacing: '0.08em', padding: '0.35rem 0.65rem', fontWeight: 700 }}>
                   Zayrath Corporate Subsidiaries
                 </div>
 
@@ -226,23 +231,23 @@ export default function Navbar({ activeView, setActiveView, onOpenRfq, rfqCount 
                   style={{
                     display: 'flex',
                     alignItems: 'flex-start',
-                    gap: '0.75rem',
-                    padding: '0.75rem',
+                    gap: '0.65rem',
+                    padding: '0.65rem',
                     borderRadius: '8px',
                     cursor: 'pointer',
-                    background: activeView === 'hardware' ? 'rgba(212, 175, 55, 0.12)' : 'transparent',
-                    border: activeView === 'hardware' ? '1px solid rgba(212, 175, 55, 0.25)' : '1px solid transparent',
+                    background: activeView === 'hardware' ? 'rgba(10, 88, 202, 0.08)' : 'transparent',
+                    border: activeView === 'hardware' ? '1px solid rgba(10, 88, 202, 0.22)' : '1px solid transparent',
                     transition: 'all 0.2s'
                   }}
-                  onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(212, 175, 55, 0.08)'}
-                  onMouseLeave={(e) => e.currentTarget.style.background = activeView === 'hardware' ? 'rgba(212, 175, 55, 0.12)' : 'transparent'}
+                  onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(10, 88, 202, 0.06)'}
+                  onMouseLeave={(e) => e.currentTarget.style.background = activeView === 'hardware' ? 'rgba(10, 88, 202, 0.08)' : 'transparent'}
                 >
-                  <div style={{ background: 'rgba(212, 175, 55, 0.15)', padding: '0.5rem', borderRadius: '6px', color: 'var(--gold-light)' }}>
-                    <Server size={20} />
+                  <div style={{ background: 'rgba(10, 88, 202, 0.1)', padding: '0.45rem', borderRadius: '6px', color: 'var(--brand-primary)', flexShrink: 0 }}>
+                    <Server size={18} />
                   </div>
                   <div>
-                    <div style={{ fontWeight: 700, color: '#0F172A', fontSize: '0.92rem' }}>Zayrath Tech Systems</div>
-                    <div style={{ fontSize: '0.78rem', color: 'var(--text-secondary)', marginTop: '2px' }}>
+                    <div style={{ fontWeight: 700, color: '#0F172A', fontSize: '0.88rem' }}>Zayrath Tech Systems</div>
+                    <div style={{ fontSize: '0.74rem', color: 'var(--text-secondary)', marginTop: '2px' }}>
                       IT Products & Servers (Dedicated Page →)
                     </div>
                   </div>
@@ -254,24 +259,24 @@ export default function Navbar({ activeView, setActiveView, onOpenRfq, rfqCount 
                   style={{
                     display: 'flex',
                     alignItems: 'flex-start',
-                    gap: '0.75rem',
-                    padding: '0.75rem',
+                    gap: '0.65rem',
+                    padding: '0.65rem',
                     borderRadius: '8px',
                     cursor: 'pointer',
-                    marginTop: '0.4rem',
-                    background: activeView === 'software' ? 'rgba(212, 175, 55, 0.12)' : 'transparent',
-                    border: activeView === 'software' ? '1px solid rgba(212, 175, 55, 0.25)' : '1px solid transparent',
+                    marginTop: '0.35rem',
+                    background: activeView === 'software' ? 'rgba(10, 88, 202, 0.08)' : 'transparent',
+                    border: activeView === 'software' ? '1px solid rgba(10, 88, 202, 0.22)' : '1px solid transparent',
                     transition: 'all 0.2s'
                   }}
-                  onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(212, 175, 55, 0.08)'}
-                  onMouseLeave={(e) => e.currentTarget.style.background = activeView === 'software' ? 'rgba(212, 175, 55, 0.12)' : 'transparent'}
+                  onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(10, 88, 202, 0.06)'}
+                  onMouseLeave={(e) => e.currentTarget.style.background = activeView === 'software' ? 'rgba(10, 88, 202, 0.08)' : 'transparent'}
                 >
-                  <div style={{ background: 'rgba(212, 175, 55, 0.15)', padding: '0.5rem', borderRadius: '6px', color: 'var(--gold-light)' }}>
-                    <Code2 size={20} />
+                  <div style={{ background: 'rgba(10, 88, 202, 0.1)', padding: '0.45rem', borderRadius: '6px', color: 'var(--brand-primary)', flexShrink: 0 }}>
+                    <Code2 size={18} />
                   </div>
                   <div>
-                    <div style={{ fontWeight: 700, color: '#0F172A', fontSize: '0.92rem' }}>Zayrath Software Solutions</div>
-                    <div style={{ fontSize: '0.78rem', color: 'var(--text-secondary)', marginTop: '2px' }}>
+                    <div style={{ fontWeight: 700, color: '#0F172A', fontSize: '0.88rem' }}>Zayrath Software Solutions</div>
+                    <div style={{ fontSize: '0.74rem', color: 'var(--text-secondary)', marginTop: '2px' }}>
                       Custom Software & AI (Dedicated Page →)
                     </div>
                   </div>
@@ -285,20 +290,21 @@ export default function Navbar({ activeView, setActiveView, onOpenRfq, rfqCount 
             style={{
               background: 'none',
               border: 'none',
-              color: activeView === 'hardware' ? 'var(--text-gold)' : 'var(--text-primary)',
+              color: activeView === 'hardware' ? 'var(--brand-primary)' : 'var(--text-primary)',
               fontFamily: 'var(--font-heading)',
-              fontSize: '0.92rem',
+              fontSize: '0.88rem',
               fontWeight: activeView === 'hardware' ? 800 : 600,
               cursor: 'pointer',
               display: 'flex',
               alignItems: 'center',
-              gap: '0.4rem',
-              padding: '0.5rem 0',
-              borderBottom: activeView === 'hardware' ? '2px solid var(--gold-primary)' : '2px solid transparent',
-              transition: 'all 0.2s ease'
+              gap: '0.35rem',
+              padding: '0.45rem 0',
+              borderBottom: activeView === 'hardware' ? '2px solid var(--brand-primary)' : '2px solid transparent',
+              transition: 'all 0.2s ease',
+              whiteSpace: 'nowrap'
             }}
           >
-            <Server size={15} style={{ color: 'var(--gold-primary)' }} />
+            <Server size={15} style={{ color: 'var(--brand-primary)' }} />
             IT Products
           </button>
 
@@ -307,20 +313,21 @@ export default function Navbar({ activeView, setActiveView, onOpenRfq, rfqCount 
             style={{
               background: 'none',
               border: 'none',
-              color: activeView === 'software' ? 'var(--text-gold)' : 'var(--text-primary)',
+              color: activeView === 'software' ? 'var(--brand-primary)' : 'var(--text-primary)',
               fontFamily: 'var(--font-heading)',
-              fontSize: '0.92rem',
+              fontSize: '0.88rem',
               fontWeight: activeView === 'software' ? 800 : 600,
               cursor: 'pointer',
               display: 'flex',
               alignItems: 'center',
-              gap: '0.4rem',
-              padding: '0.5rem 0',
-              borderBottom: activeView === 'software' ? '2px solid var(--gold-primary)' : '2px solid transparent',
-              transition: 'all 0.2s ease'
+              gap: '0.35rem',
+              padding: '0.45rem 0',
+              borderBottom: activeView === 'software' ? '2px solid var(--brand-primary)' : '2px solid transparent',
+              transition: 'all 0.2s ease',
+              whiteSpace: 'nowrap'
             }}
           >
-            <Code2 size={15} style={{ color: 'var(--gold-primary)' }} />
+            <Code2 size={15} style={{ color: 'var(--brand-primary)' }} />
             Software Solutions
           </button>
 
@@ -331,12 +338,13 @@ export default function Navbar({ activeView, setActiveView, onOpenRfq, rfqCount 
               border: 'none',
               color: 'var(--text-secondary)',
               fontFamily: 'var(--font-heading)',
-              fontSize: '0.92rem',
+              fontSize: '0.88rem',
               fontWeight: 600,
               cursor: 'pointer',
-              transition: 'color 0.2s ease'
+              transition: 'color 0.2s ease',
+              whiteSpace: 'nowrap'
             }}
-            onMouseEnter={(e) => e.currentTarget.style.color = 'var(--text-gold)'}
+            onMouseEnter={(e) => e.currentTarget.style.color = 'var(--brand-primary)'}
             onMouseLeave={(e) => e.currentTarget.style.color = 'var(--text-secondary)'}
           >
             Vision & Leadership
@@ -344,27 +352,27 @@ export default function Navbar({ activeView, setActiveView, onOpenRfq, rfqCount 
         </nav>
 
         {/* Action Button: RFQ / Enterprise Inquiry */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
           <button
             onClick={onOpenRfq}
             className="btn-gold-primary"
             style={{
-              padding: '0.65rem 1.35rem',
-              fontSize: '0.85rem'
+              padding: '0.55rem 1.15rem',
+              fontSize: '0.82rem'
             }}
           >
-            <FileText size={16} />
+            <FileText size={15} />
             <span>Request Quote</span>
             {rfqCount > 0 && (
               <span 
                 style={{
                   background: '#FFFFFF',
-                  color: 'var(--text-gold)',
+                  color: 'var(--brand-primary)',
                   borderRadius: '999px',
-                  padding: '0.1rem 0.45rem',
-                  fontSize: '0.72rem',
+                  padding: '0.1rem 0.4rem',
+                  fontSize: '0.7rem',
                   fontWeight: 800,
-                  marginLeft: '0.2rem'
+                  marginLeft: '0.15rem'
                 }}
               >
                 {rfqCount}
@@ -378,14 +386,15 @@ export default function Navbar({ activeView, setActiveView, onOpenRfq, rfqCount 
             style={{
               display: 'none',
               background: '#FFFFFF',
-              border: '1px solid rgba(184, 134, 11, 0.3)',
+              border: '1px solid var(--border-gold)',
               borderRadius: '8px',
-              color: 'var(--text-gold)',
-              padding: '0.6rem',
+              color: 'var(--brand-primary)',
+              padding: '0.5rem',
               cursor: 'pointer',
               boxShadow: '0 2px 6px rgba(15, 23, 42, 0.08)'
             }}
             className="mobile-hamburger"
+            aria-label="Toggle menu"
           >
             {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
@@ -398,11 +407,11 @@ export default function Navbar({ activeView, setActiveView, onOpenRfq, rfqCount 
         <div 
           style={{
             background: 'rgba(255, 255, 255, 0.98)',
-            borderTop: '1px solid rgba(184, 134, 11, 0.25)',
-            padding: '1.5rem',
+            borderTop: '1px solid var(--border-gold)',
+            padding: '1.25rem 1.25rem 2rem',
             display: 'flex',
             flexDirection: 'column',
-            gap: '1rem',
+            gap: '0.85rem',
             boxShadow: '0 20px 40px rgba(15, 23, 42, 0.15)'
           }}
         >
@@ -412,7 +421,7 @@ export default function Navbar({ activeView, setActiveView, onOpenRfq, rfqCount 
               display: 'flex',
               alignItems: 'center',
               gap: '0.75rem',
-              background: activeView === 'group' ? 'rgba(184, 134, 11, 0.12)' : 'none',
+              background: activeView === 'group' ? 'rgba(10, 88, 202, 0.08)' : 'none',
               border: 'none',
               color: '#0F172A',
               padding: '0.75rem 1rem',
@@ -420,14 +429,14 @@ export default function Navbar({ activeView, setActiveView, onOpenRfq, rfqCount 
               textAlign: 'left',
               fontFamily: 'var(--font-heading)',
               fontWeight: 600,
-              fontSize: '1rem'
+              fontSize: '0.95rem'
             }}
           >
-            <Building2 size={18} style={{ color: 'var(--gold-primary)' }} />
+            <Building2 size={18} style={{ color: 'var(--brand-primary)' }} />
             Zayrath Group Overview
           </button>
 
-          <div style={{ padding: '0.5rem 0.75rem', fontSize: '0.75rem', color: 'var(--gold-light)', fontWeight: 700, letterSpacing: '0.05em' }}>
+          <div style={{ padding: '0.4rem 0.75rem', fontSize: '0.72rem', color: 'var(--brand-primary)', fontWeight: 700, letterSpacing: '0.06em' }}>
             SUBSIDIARY ENTERPRISES:
           </div>
 
@@ -437,21 +446,21 @@ export default function Navbar({ activeView, setActiveView, onOpenRfq, rfqCount 
               display: 'flex',
               alignItems: 'center',
               gap: '0.75rem',
-              background: activeView === 'hardware' ? 'rgba(184, 134, 11, 0.12)' : 'rgba(15, 23, 42, 0.03)',
-              border: '1px solid rgba(184, 134, 11, 0.25)',
+              background: activeView === 'hardware' ? 'rgba(10, 88, 202, 0.08)' : 'rgba(15, 23, 42, 0.03)',
+              border: '1px solid var(--border-gold)',
               color: '#0F172A',
-              padding: '0.85rem 1rem',
+              padding: '0.8rem 1rem',
               borderRadius: '8px',
               textAlign: 'left',
               fontFamily: 'var(--font-heading)',
               fontWeight: 600,
-              fontSize: '0.95rem'
+              fontSize: '0.92rem'
             }}
           >
-            <Server size={18} style={{ color: 'var(--gold-primary)' }} />
+            <Server size={18} style={{ color: 'var(--brand-primary)' }} />
             <div>
               <div>Zayrath Tech Systems</div>
-              <div style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', fontWeight: 400 }}>IT Products & Server Sales</div>
+              <div style={{ fontSize: '0.74rem', color: 'var(--text-secondary)', fontWeight: 400 }}>IT Products & Server Sales</div>
             </div>
           </button>
 
@@ -461,21 +470,21 @@ export default function Navbar({ activeView, setActiveView, onOpenRfq, rfqCount 
               display: 'flex',
               alignItems: 'center',
               gap: '0.75rem',
-              background: activeView === 'software' ? 'rgba(184, 134, 11, 0.12)' : 'rgba(15, 23, 42, 0.03)',
-              border: '1px solid rgba(184, 134, 11, 0.25)',
+              background: activeView === 'software' ? 'rgba(10, 88, 202, 0.08)' : 'rgba(15, 23, 42, 0.03)',
+              border: '1px solid var(--border-gold)',
               color: '#0F172A',
-              padding: '0.85rem 1rem',
+              padding: '0.8rem 1rem',
               borderRadius: '8px',
               textAlign: 'left',
               fontFamily: 'var(--font-heading)',
               fontWeight: 600,
-              fontSize: '0.95rem'
+              fontSize: '0.92rem'
             }}
           >
-            <Code2 size={18} style={{ color: 'var(--gold-primary)' }} />
+            <Code2 size={18} style={{ color: 'var(--brand-primary)' }} />
             <div>
               <div>Zayrath Software Solutions</div>
-              <div style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', fontWeight: 400 }}>Full-Cycle Software & AI Engineering</div>
+              <div style={{ fontSize: '0.74rem', color: 'var(--text-secondary)', fontWeight: 400 }}>Full-Cycle Software & AI Engineering</div>
             </div>
           </button>
 
@@ -491,23 +500,32 @@ export default function Navbar({ activeView, setActiveView, onOpenRfq, rfqCount 
               padding: '0.75rem 1rem',
               textAlign: 'left',
               fontFamily: 'var(--font-heading)',
-              fontSize: '0.95rem'
+              fontSize: '0.92rem'
             }}
           >
-            <Globe2 size={18} style={{ color: 'var(--gold-primary)' }} />
+            <Globe2 size={18} style={{ color: 'var(--brand-primary)' }} />
             Corporate Vision & Global Presence
           </button>
         </div>
       )}
 
-      {/* Responsive CSS for Mobile */}
+      {/* Responsive Breakpoints */}
       <style>{`
-        @media (max-width: 992px) {
+        @media (max-width: 1024px) {
           .desktop-nav {
             display: none !important;
           }
           .mobile-hamburger {
             display: inline-flex !important;
+          }
+        }
+        @media (max-width: 480px) {
+          .navbar-brand-badge {
+            width: 38px !important;
+            height: 38px !important;
+          }
+          .navbar-brand-title {
+            font-size: 1.18rem !important;
           }
         }
       `}</style>

@@ -34,15 +34,15 @@ export default function CorporateVision() {
         {/* Section Header */}
         <div className="section-header">
           <div className="badge-gold section-tag">
-            <Globe2 size={14} style={{ color: 'var(--gold-primary)' }} />
+            <Globe2 size={14} style={{ color: 'var(--brand-primary)' }} />
             <span>Corporate Philosophy & Vision</span>
           </div>
           <h2 className="section-title">
             The Zayrath Conglomerate Standard: <br />
-            <span className="text-gold-gradient">A Distinctive Path to Progress</span>
+            <span className="text-gold-gradient">Global Vision • Greater Tomorrows</span>
           </h2>
           <p className="section-desc">
-            Founded on the pillars of uncompromising engineering excellence, visionary governance, and unyielding customer commitment.
+            Founded on the pillars of uncompromising engineering excellence, visionary governance, and unyielding customer commitment across the globe.
           </p>
         </div>
 
@@ -53,7 +53,7 @@ export default function CorporateVision() {
             position: 'relative',
             overflow: 'hidden',
             marginBottom: '4rem',
-            border: '1px solid rgba(212, 175, 55, 0.35)'
+            border: '1px solid var(--border-gold)'
           }}
         >
           <div style={{ position: 'relative', height: '380px' }}>
@@ -66,7 +66,7 @@ export default function CorporateVision() {
               style={{
                 position: 'absolute',
                 inset: 0,
-                background: 'linear-gradient(90deg, rgba(8, 10, 15, 0.95) 0%, rgba(8, 10, 15, 0.75) 50%, rgba(8, 10, 15, 0.4) 100%)'
+                background: 'linear-gradient(90deg, rgba(8, 20, 45, 0.94) 0%, rgba(8, 25, 55, 0.78) 50%, rgba(8, 25, 55, 0.45) 100%)'
               }}
             />
 
@@ -81,17 +81,17 @@ export default function CorporateVision() {
               }}
               className="hq-banner-text"
             >
-              <div className="badge-gold" style={{ marginBottom: '1rem' }}>
-                <Building size={14} style={{ color: 'var(--gold-primary)' }} />
+              <div className="badge-gold" style={{ marginBottom: '1rem', background: 'rgba(255, 255, 255, 0.15)', borderColor: 'rgba(255, 255, 255, 0.3)', color: '#FFFFFF' }}>
+                <Building size={14} style={{ color: '#38BDF8' }} />
                 <span>Multinational Corporate Command</span>
               </div>
-              <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '2.2rem', color: '#FFF', fontWeight: 800, lineHeight: 1.2, marginBottom: '1rem' }}>
+              <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '2.2rem', color: '#FFF', fontWeight: 800, lineHeight: 1.2, marginBottom: '1rem' }}>
                 Engineering Sovereignty in Every Venture
               </h3>
               <p style={{ color: '#E2E8F0', fontSize: '0.98rem', lineHeight: 1.6 }}>
                 "We do not merely supply technology; we construct the enduring foundations upon which contemporary global commerce thrives."
               </p>
-              <div style={{ marginTop: '1.25rem', fontFamily: 'var(--font-heading)', color: 'var(--gold-light)', fontWeight: 700, fontSize: '0.9rem' }}>
+              <div style={{ marginTop: '1.25rem', fontFamily: 'var(--font-heading)', color: '#38BDF8', fontWeight: 700, fontSize: '0.9rem' }}>
                 — Executive Board, Zayrath Group
               </div>
             </div>
@@ -139,8 +139,8 @@ export default function CorporateVision() {
                   padding: '2rem 1.5rem',
                   textAlign: 'center',
                   background: '#FFFFFF',
-                  border: '1px solid rgba(184, 134, 11, 0.2)',
-                  boxShadow: '0 4px 20px rgba(15, 23, 42, 0.05)'
+                  border: '1px solid var(--border-gold)',
+                  boxShadow: '0 4px 20px rgba(10, 88, 202, 0.05)'
                 }}
               >
                 <div 
@@ -148,12 +148,12 @@ export default function CorporateVision() {
                     width: '50px',
                     height: '50px',
                     borderRadius: '50%',
-                    background: 'rgba(184, 134, 11, 0.12)',
-                    border: '1px solid rgba(184, 134, 11, 0.25)',
+                    background: 'rgba(10, 88, 202, 0.08)',
+                    border: '1px solid rgba(10, 88, 202, 0.22)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    color: 'var(--text-gold)',
+                    color: 'var(--brand-primary)',
                     margin: '0 auto 1.25rem'
                   }}
                 >
@@ -176,21 +176,21 @@ export default function CorporateVision() {
           style={{
             padding: '2.5rem',
             background: '#FFFFFF',
-            border: '1px solid rgba(184, 134, 11, 0.25)',
-            boxShadow: '0 8px 30px rgba(15, 23, 42, 0.06)'
+            border: '1px solid var(--border-gold)',
+            boxShadow: '0 8px 30px rgba(10, 88, 202, 0.06)'
           }}
         >
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem', marginBottom: '2rem' }}>
             <div>
-              <div style={{ fontSize: '0.78rem', color: 'var(--text-gold)', textTransform: 'uppercase', fontWeight: 700, letterSpacing: '0.08em' }}>
+              <div style={{ fontSize: '0.78rem', color: 'var(--brand-primary)', textTransform: 'uppercase', fontWeight: 700, letterSpacing: '0.08em' }}>
                 Worldwide Operations Network
               </div>
-              <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.75rem', color: 'var(--text-primary)', fontWeight: 800 }}>
+              <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.75rem', color: 'var(--text-primary)', fontWeight: 800 }}>
                 Zayrath Group Global Presence
               </h3>
             </div>
             <div className="badge-gold">
-              <Globe2 size={14} style={{ color: 'var(--gold-primary)' }} />
+              <Globe2 size={14} style={{ color: 'var(--brand-primary)' }} />
               <span>Multi-Region Active NOCs</span>
             </div>
           </div>
@@ -208,16 +208,16 @@ export default function CorporateVision() {
                 key={idx}
                 style={{
                   background: '#F8FAFC',
-                  border: '1px solid rgba(184, 134, 11, 0.2)',
+                  border: '1px solid var(--border-gold)',
                   borderRadius: '10px',
                   padding: '1.25rem'
                 }}
               >
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
-                  <MapPin size={16} style={{ color: 'var(--gold-primary)' }} />
+                  <MapPin size={16} style={{ color: 'var(--brand-primary)' }} />
                   <span style={{ fontWeight: 700, color: 'var(--text-primary)', fontSize: '1rem' }}>{hub.city}</span>
                 </div>
-                <div style={{ fontSize: '0.8rem', color: 'var(--text-gold)', fontWeight: 600, marginBottom: '0.35rem' }}>
+                <div style={{ fontSize: '0.8rem', color: 'var(--brand-primary)', fontWeight: 600, marginBottom: '0.35rem' }}>
                   {hub.role}
                 </div>
                 <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>

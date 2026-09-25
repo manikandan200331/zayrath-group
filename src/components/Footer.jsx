@@ -11,7 +11,7 @@ import {
   ShieldCheck, 
   Globe2 
 } from 'lucide-react';
-import logoImg from '../assets/zayrath-logo.jpg';
+import iconImg from '../assets/zayrath-icon.jpg';
 
 export default function Footer({ setActiveView, onOpenRfq }) {
   const [email, setEmail] = useState('');
@@ -34,9 +34,9 @@ export default function Footer({ setActiveView, onOpenRfq }) {
     <footer 
       style={{
         background: '#F8FAFC',
-        borderTop: '1px solid rgba(184, 134, 11, 0.25)',
-        paddingTop: '5rem',
-        paddingBottom: '2.5rem',
+        borderTop: '1px solid var(--border-gold)',
+        paddingTop: 'clamp(3.5rem, 5vw, 4.5rem)',
+        paddingBottom: '2rem',
         position: 'relative'
       }}
     >
@@ -46,65 +46,68 @@ export default function Footer({ setActiveView, onOpenRfq }) {
         <div 
           style={{
             display: 'grid',
-            gridTemplateColumns: '1.4fr 1fr 1fr 1.2fr',
-            gap: '3rem',
-            marginBottom: '4rem'
+            gridTemplateColumns: '1.3fr 1fr 1fr 1.1fr',
+            gap: 'clamp(1.5rem, 3vw, 2.5rem)',
+            marginBottom: '3rem'
           }}
           className="footer-grid"
         >
           
           {/* Col 1: Brand & Slogan */}
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem', marginBottom: '1.25rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem' }}>
               <div 
                 style={{
-                  width: '48px',
-                  height: '48px',
+                  width: '42px',
+                  height: '42px',
                   borderRadius: '10px',
                   overflow: 'hidden',
-                  border: '1px solid rgba(184, 134, 11, 0.4)'
+                  border: '1.5px solid var(--border-gold)',
+                  boxShadow: '0 2px 10px rgba(10, 88, 202, 0.12)',
+                  background: '#FFFFFF',
+                  flexShrink: 0
                 }}
               >
                 <img 
-                  src={logoImg} 
-                  alt="Zayrath Group Logo" 
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  src={iconImg} 
+                  alt="Zayrath Group Emblem" 
+                  style={{ width: '100%', height: '100%', objectFit: 'contain' }}
                 />
               </div>
               <div>
-                <div style={{ fontFamily: 'var(--font-serif)', fontSize: '1.4rem', fontWeight: 800, background: 'var(--gold-gradient-text)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+                <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.35rem', fontWeight: 900, background: 'var(--gold-gradient-text)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', letterSpacing: '0.04em', lineHeight: 1 }}>
                   ZAYRATH
                 </div>
-                <div style={{ fontSize: '0.68rem', letterSpacing: '0.3em', color: 'var(--text-gold)', textTransform: 'uppercase', fontWeight: 700 }}>
+                <div style={{ fontSize: '0.62rem', letterSpacing: '0.3em', color: 'var(--text-secondary)', textTransform: 'uppercase', fontWeight: 800 }}>
                   G R O U P
                 </div>
               </div>
             </div>
 
-            <p style={{ color: 'var(--text-gold)', fontStyle: 'italic', fontSize: '0.92rem', marginBottom: '1rem', fontWeight: 700 }}>
-              "A Distinctive Path to Progress"
+            <p style={{ color: 'var(--brand-primary)', fontStyle: 'normal', fontSize: '0.84rem', letterSpacing: '0.06em', marginBottom: '0.85rem', fontWeight: 800, textTransform: 'uppercase' }}>
+              "Global Vision • Greater Tomorrows"
             </p>
 
-            <p style={{ color: 'var(--text-secondary)', fontSize: '0.86rem', lineHeight: 1.6, marginBottom: '1.5rem' }}>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', lineHeight: 1.6, marginBottom: '1.25rem' }}>
               Premier multinational conglomerate operating frontier subsidiaries in physical IT hardware engineering and custom enterprise software intelligence.
             </p>
 
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-gold)', fontSize: '0.82rem', fontWeight: 600 }}>
-              <ShieldCheck size={16} style={{ color: 'var(--gold-primary)' }} />
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', color: 'var(--brand-primary)', fontSize: '0.8rem', fontWeight: 600 }}>
+              <ShieldCheck size={15} style={{ color: 'var(--brand-primary)' }} />
               <span>Registered Enterprise Conglomerate</span>
             </div>
           </div>
 
           {/* Col 2: Subsidiary 01 */}
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1.25rem' }}>
-              <Server size={18} style={{ color: 'var(--gold-primary)' }} />
-              <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1rem', fontWeight: 700, color: 'var(--text-primary)' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', marginBottom: '1rem' }}>
+              <Server size={17} style={{ color: 'var(--brand-primary)' }} />
+              <div style={{ fontFamily: 'var(--font-heading)', fontSize: '0.95rem', fontWeight: 700, color: 'var(--text-primary)' }}>
                 Zayrath Tech Systems
               </div>
             </div>
 
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.65rem', fontSize: '0.86rem' }}>
+            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.55rem', fontSize: '0.84rem' }}>
               <li>
                 <a 
                   onClick={() => {
@@ -115,7 +118,7 @@ export default function Footer({ setActiveView, onOpenRfq }) {
                     }, 50);
                   }}
                   style={{ color: 'var(--text-secondary)', cursor: 'pointer', transition: 'color 0.2s' }}
-                  onMouseEnter={(e) => e.target.style.color = 'var(--gold-light)'}
+                  onMouseEnter={(e) => e.target.style.color = 'var(--brand-primary)'}
                   onMouseLeave={(e) => e.target.style.color = 'var(--text-secondary)'}
                 >
                   Enterprise Rack Servers
@@ -131,7 +134,7 @@ export default function Footer({ setActiveView, onOpenRfq }) {
                     }, 50);
                   }}
                   style={{ color: 'var(--text-secondary)', cursor: 'pointer', transition: 'color 0.2s' }}
-                  onMouseEnter={(e) => e.target.style.color = 'var(--gold-light)'}
+                  onMouseEnter={(e) => e.target.style.color = 'var(--brand-primary)'}
                   onMouseLeave={(e) => e.target.style.color = 'var(--text-secondary)'}
                 >
                   AI & GPU Compute Clusters
@@ -147,7 +150,7 @@ export default function Footer({ setActiveView, onOpenRfq }) {
                     }, 50);
                   }}
                   style={{ color: 'var(--text-secondary)', cursor: 'pointer', transition: 'color 0.2s' }}
-                  onMouseEnter={(e) => e.target.style.color = 'var(--gold-light)'}
+                  onMouseEnter={(e) => e.target.style.color = 'var(--brand-primary)'}
                   onMouseLeave={(e) => e.target.style.color = 'var(--text-secondary)'}
                 >
                   High-End Workstations
@@ -163,7 +166,7 @@ export default function Footer({ setActiveView, onOpenRfq }) {
                     }, 50);
                   }}
                   style={{ color: 'var(--text-secondary)', cursor: 'pointer', transition: 'color 0.2s' }}
-                  onMouseEnter={(e) => e.target.style.color = 'var(--gold-light)'}
+                  onMouseEnter={(e) => e.target.style.color = 'var(--brand-primary)'}
                   onMouseLeave={(e) => e.target.style.color = 'var(--text-secondary)'}
                 >
                   Core Spine & PoE Switches
@@ -171,24 +174,8 @@ export default function Footer({ setActiveView, onOpenRfq }) {
               </li>
               <li>
                 <a 
-                  onClick={() => {
-                    setActiveView('hardware');
-                    setTimeout(() => {
-                      const el = document.getElementById('hardware-catalog');
-                      if (el) el.scrollIntoView({ behavior: 'smooth' });
-                    }, 50);
-                  }}
-                  style={{ color: 'var(--text-secondary)', cursor: 'pointer', transition: 'color 0.2s' }}
-                  onMouseEnter={(e) => e.target.style.color = 'var(--gold-light)'}
-                  onMouseLeave={(e) => e.target.style.color = 'var(--text-secondary)'}
-                >
-                  All-Flash SAN Storage Arrays
-                </a>
-              </li>
-              <li>
-                <a 
                   onClick={onOpenRfq}
-                  style={{ color: 'var(--gold-primary)', fontWeight: 600, cursor: 'pointer' }}
+                  style={{ color: 'var(--brand-primary)', fontWeight: 700, cursor: 'pointer' }}
                 >
                   Request Hardware RFQ →
                 </a>
@@ -198,14 +185,14 @@ export default function Footer({ setActiveView, onOpenRfq }) {
 
           {/* Col 3: Subsidiary 02 */}
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1.25rem' }}>
-              <Code2 size={18} style={{ color: 'var(--gold-primary)' }} />
-              <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1rem', fontWeight: 700, color: 'var(--text-primary)' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', marginBottom: '1rem' }}>
+              <Code2 size={17} style={{ color: 'var(--brand-primary)' }} />
+              <div style={{ fontFamily: 'var(--font-heading)', fontSize: '0.95rem', fontWeight: 700, color: 'var(--text-primary)' }}>
                 Zayrath Software Solutions
               </div>
             </div>
 
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.65rem', fontSize: '0.86rem' }}>
+            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.55rem', fontSize: '0.84rem' }}>
               <li>
                 <a 
                   onClick={() => {
@@ -216,7 +203,7 @@ export default function Footer({ setActiveView, onOpenRfq }) {
                     }, 50);
                   }}
                   style={{ color: 'var(--text-secondary)', cursor: 'pointer' }}
-                  onMouseEnter={(e) => e.target.style.color = 'var(--text-gold)'}
+                  onMouseEnter={(e) => e.target.style.color = 'var(--brand-primary)'}
                   onMouseLeave={(e) => e.target.style.color = 'var(--text-secondary)'}
                 >
                   Private LLMs & AI Agents
@@ -232,7 +219,7 @@ export default function Footer({ setActiveView, onOpenRfq }) {
                     }, 50);
                   }}
                   style={{ color: 'var(--text-secondary)', cursor: 'pointer' }}
-                  onMouseEnter={(e) => e.target.style.color = 'var(--text-gold)'}
+                  onMouseEnter={(e) => e.target.style.color = 'var(--brand-primary)'}
                   onMouseLeave={(e) => e.target.style.color = 'var(--text-secondary)'}
                 >
                   Custom Enterprise ERP & CRM
@@ -248,26 +235,10 @@ export default function Footer({ setActiveView, onOpenRfq }) {
                     }, 50);
                   }}
                   style={{ color: 'var(--text-secondary)', cursor: 'pointer' }}
-                  onMouseEnter={(e) => e.target.style.color = 'var(--text-gold)'}
+                  onMouseEnter={(e) => e.target.style.color = 'var(--brand-primary)'}
                   onMouseLeave={(e) => e.target.style.color = 'var(--text-secondary)'}
                 >
                   Multi-Cloud DevOps & K8s
-                </a>
-              </li>
-              <li>
-                <a 
-                  onClick={() => {
-                    setActiveView('software');
-                    setTimeout(() => {
-                      const el = document.getElementById('software-services');
-                      if (el) el.scrollIntoView({ behavior: 'smooth' });
-                    }, 50);
-                  }}
-                  style={{ color: 'var(--text-secondary)', cursor: 'pointer' }}
-                  onMouseEnter={(e) => e.target.style.color = 'var(--text-gold)'}
-                  onMouseLeave={(e) => e.target.style.color = 'var(--text-secondary)'}
-                >
-                  Mobile iOS & Android Apps
                 </a>
               </li>
               <li>
@@ -279,7 +250,7 @@ export default function Footer({ setActiveView, onOpenRfq }) {
                       if (el) el.scrollIntoView({ behavior: 'smooth' });
                     }, 50);
                   }}
-                  style={{ color: 'var(--gold-primary)', fontWeight: 600, cursor: 'pointer' }}
+                  style={{ color: 'var(--brand-primary)', fontWeight: 700, cursor: 'pointer' }}
                 >
                   Cost & Timeline Estimator →
                 </a>
@@ -289,15 +260,15 @@ export default function Footer({ setActiveView, onOpenRfq }) {
 
           {/* Col 4: Corporate Governance & Newsletter */}
           <div>
-            <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1rem', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '1.25rem' }}>
+            <div style={{ fontFamily: 'var(--font-heading)', fontSize: '0.95rem', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '1rem' }}>
               Corporate Intelligence
             </div>
 
-            <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', marginBottom: '1rem' }}>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '0.84rem', marginBottom: '0.85rem' }}>
               Subscribe to executive briefings on enterprise IT procurement shifts and AI architectural developments.
             </p>
 
-            <form onSubmit={handleSubscribe} style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', marginBottom: '1.5rem' }}>
+            <form onSubmit={handleSubscribe} style={{ display: 'flex', flexDirection: 'column', gap: '0.45rem', marginBottom: '1.25rem' }}>
               <input 
                 type="email" 
                 required
@@ -305,25 +276,25 @@ export default function Footer({ setActiveView, onOpenRfq }) {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 style={{
-                  padding: '0.75rem 1rem',
+                  padding: '0.65rem 0.85rem',
                   background: '#FFFFFF',
-                  border: '1px solid rgba(184, 134, 11, 0.3)',
+                  border: '1px solid var(--border-gold)',
                   borderRadius: '8px',
                   color: 'var(--text-primary)',
-                  fontSize: '0.85rem',
+                  fontSize: '0.84rem',
                   outline: 'none'
                 }}
               />
               <button 
                 type="submit" 
                 className="btn-gold-primary" 
-                style={{ padding: '0.75rem', fontSize: '0.85rem' }}
+                style={{ padding: '0.65rem', fontSize: '0.82rem' }}
               >
                 {subscribed ? 'Subscribed ✓' : 'Subscribe to Briefings'}
               </button>
             </form>
 
-            <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>
+            <div style={{ fontSize: '0.74rem', color: 'var(--text-muted)' }}>
               Chennai HQ • Dubai • Singapore • London
             </div>
           </div>
@@ -333,22 +304,22 @@ export default function Footer({ setActiveView, onOpenRfq }) {
         {/* Bottom Bar */}
         <div 
           style={{
-            borderTop: '1px solid rgba(184, 134, 11, 0.2)',
-            paddingTop: '2rem',
+            borderTop: '1px solid rgba(10, 88, 202, 0.15)',
+            paddingTop: '1.5rem',
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
             flexWrap: 'wrap',
-            gap: '1rem',
-            fontSize: '0.82rem',
+            gap: '0.85rem',
+            fontSize: '0.8rem',
             color: 'var(--text-muted)'
           }}
         >
           <div>
-            © 2026 <strong style={{ color: 'var(--text-gold)' }}>ZAYRATH GROUP</strong>. All Rights Reserved. A Distinctive Path to Progress.
+            © 2026 <strong style={{ color: 'var(--brand-primary)' }}>ZAYRATH GROUP</strong>. All Rights Reserved. Global Vision • Greater Tomorrows.
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem', flexWrap: 'wrap' }}>
             <span>Privacy Governance</span>
             <span>Enterprise Terms</span>
             <span>Security Compliance</span>
@@ -356,21 +327,20 @@ export default function Footer({ setActiveView, onOpenRfq }) {
               onClick={scrollToTop}
               style={{
                 background: '#FFFFFF',
-                border: '1px solid rgba(184, 134, 11, 0.3)',
+                border: '1px solid var(--border-gold)',
                 borderRadius: '50%',
-                width: '34px',
-                height: '34px',
+                width: '32px',
+                height: '32px',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                color: 'var(--text-gold)',
+                color: 'var(--brand-primary)',
                 cursor: 'pointer',
-                marginLeft: '0.5rem',
-                boxShadow: '0 2px 8px rgba(15, 23, 42, 0.08)'
+                boxShadow: '0 2px 6px rgba(10, 88, 202, 0.12)'
               }}
               title="Return to top"
             >
-              <ArrowUp size={16} />
+              <ArrowUp size={15} />
             </button>
           </div>
         </div>
@@ -378,15 +348,16 @@ export default function Footer({ setActiveView, onOpenRfq }) {
       </div>
 
       <style>{`
-        @media (max-width: 992px) {
+        @media (max-width: 900px) {
           .footer-grid {
             grid-template-columns: repeat(2, 1fr) !important;
-            gap: 2rem !important;
+            gap: 1.75rem !important;
           }
         }
-        @media (max-width: 600px) {
+        @media (max-width: 520px) {
           .footer-grid {
             grid-template-columns: 1fr !important;
+            gap: 1.5rem !important;
           }
         }
       `}</style>

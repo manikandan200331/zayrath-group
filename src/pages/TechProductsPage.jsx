@@ -23,7 +23,7 @@ export default function TechProductsPage({ setActiveView, onAddToRfq, rfqItems, 
       <div 
         style={{
           background: '#F8FAFC',
-          borderBottom: '1px solid rgba(184, 134, 11, 0.2)',
+          borderBottom: '1px solid var(--border-gold)',
           padding: '0.85rem 0'
         }}
       >
@@ -38,7 +38,7 @@ export default function TechProductsPage({ setActiveView, onAddToRfq, rfqItems, 
               gap: '0.5rem',
               background: 'none',
               border: 'none',
-              color: 'var(--text-gold)',
+              color: 'var(--brand-primary)',
               fontFamily: 'var(--font-heading)',
               fontWeight: 700,
               fontSize: '0.9rem',
@@ -47,7 +47,7 @@ export default function TechProductsPage({ setActiveView, onAddToRfq, rfqItems, 
               borderRadius: '6px',
               transition: 'background 0.2s'
             }}
-            onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(184, 134, 11, 0.08)'}
+            onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(10, 88, 202, 0.08)'}
             onMouseLeave={(e) => e.currentTarget.style.background = 'none'}
           >
             <ArrowLeft size={16} />
@@ -62,7 +62,7 @@ export default function TechProductsPage({ setActiveView, onAddToRfq, rfqItems, 
               alignItems: 'center',
               gap: '0.5rem',
               background: '#FFFFFF',
-              border: '1px solid rgba(184, 134, 11, 0.3)',
+              border: '1px solid var(--border-gold)',
               color: 'var(--text-primary)',
               fontFamily: 'var(--font-heading)',
               fontWeight: 700,
@@ -70,20 +70,20 @@ export default function TechProductsPage({ setActiveView, onAddToRfq, rfqItems, 
               cursor: 'pointer',
               padding: '0.45rem 1rem',
               borderRadius: '8px',
-              boxShadow: '0 2px 8px rgba(15, 23, 42, 0.04)',
+              boxShadow: '0 2px 8px rgba(10, 88, 202, 0.06)',
               transition: 'all 0.2s'
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.background = 'rgba(184, 134, 11, 0.08)';
-              e.currentTarget.style.borderColor = 'var(--gold-primary)';
+              e.currentTarget.style.background = 'rgba(10, 88, 202, 0.06)';
+              e.currentTarget.style.borderColor = 'var(--brand-primary)';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.background = '#FFFFFF';
-              e.currentTarget.style.borderColor = 'rgba(184, 134, 11, 0.3)';
+              e.currentTarget.style.borderColor = 'var(--border-gold)';
             }}
           >
             <span>Switch to Zayrath Software Solutions</span>
-            <ArrowRight size={15} style={{ color: 'var(--gold-primary)' }} />
+            <ArrowRight size={15} style={{ color: 'var(--brand-primary)' }} />
           </button>
 
         </div>
@@ -95,18 +95,18 @@ export default function TechProductsPage({ setActiveView, onAddToRfq, rfqItems, 
           position: 'relative',
           padding: '4.5rem 0 3.5rem',
           background: '#FFFFFF',
-          borderBottom: '1px solid rgba(184, 134, 11, 0.2)'
+          borderBottom: '1px solid var(--border-gold)'
         }}
       >
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '3rem', alignItems: 'center' }} className="page-hero-grid">
             <div>
               <div className="badge-gold" style={{ marginBottom: '1rem' }}>
-                <Server size={14} style={{ color: 'var(--gold-primary)' }} />
+                <Server size={14} style={{ color: 'var(--brand-primary)' }} />
                 <span>Subsidiary 01 • Hardware Engineering & Sales</span>
               </div>
 
-              <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: '3rem', color: 'var(--text-primary)', fontWeight: 800, lineHeight: 1.15, marginBottom: '1rem' }}>
+              <h1 style={{ fontFamily: 'var(--font-heading)', fontSize: '3rem', color: 'var(--text-primary)', fontWeight: 800, lineHeight: 1.15, marginBottom: '1rem' }}>
                 Zayrath Tech Systems <br />
                 <span className="text-gold-gradient">Enterprise IT Products Sales</span>
               </h1>
@@ -144,7 +144,7 @@ export default function TechProductsPage({ setActiveView, onAddToRfq, rfqItems, 
               style={{
                 borderRadius: '16px',
                 overflow: 'hidden',
-                border: '1px solid rgba(212, 175, 55, 0.35)',
+                border: '1px solid var(--border-gold)',
                 height: '280px',
                 position: 'relative'
               }}
@@ -158,12 +158,12 @@ export default function TechProductsPage({ setActiveView, onAddToRfq, rfqItems, 
                 style={{
                   position: 'absolute',
                   inset: 0,
-                  background: 'linear-gradient(180deg, transparent 50%, rgba(8, 10, 15, 0.9) 100%)'
+                  background: 'linear-gradient(180deg, transparent 50%, rgba(8, 20, 45, 0.9) 100%)'
                 }}
               />
               <div style={{ position: 'absolute', bottom: '1.25rem', left: '1.25rem' }}>
                 <div style={{ color: '#FFF', fontWeight: 700, fontSize: '1rem' }}>Tier-4 Data Center Certified</div>
-                <div style={{ color: 'var(--gold-light)', fontSize: '0.78rem' }}>Direct Global OEM Distribution</div>
+                <div style={{ color: '#38BDF8', fontSize: '0.78rem' }}>Direct Global OEM Distribution</div>
               </div>
             </div>
           </div>
@@ -178,11 +178,11 @@ export default function TechProductsPage({ setActiveView, onAddToRfq, rfqItems, 
       />
 
       {/* Enterprise Procurement SLA & Terms */}
-      <section className="section-padding" style={{ background: '#F8FAFC', borderTop: '1px solid rgba(184, 134, 11, 0.15)' }}>
+      <section className="section-padding" style={{ background: '#F8FAFC', borderTop: '1px solid var(--border-gold)' }}>
         <div className="container">
           <div className="section-header">
             <div className="badge-gold section-tag">
-              <ShieldCheck size={14} style={{ color: 'var(--gold-primary)' }} />
+              <ShieldCheck size={14} style={{ color: 'var(--brand-primary)' }} />
               <span>Enterprise Procurement Assurance</span>
             </div>
             <h2 className="section-title">
@@ -193,8 +193,8 @@ export default function TechProductsPage({ setActiveView, onAddToRfq, rfqItems, 
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2rem' }} className="assurance-grid">
             
-            <div className="glass-card" style={{ padding: '2rem', background: '#FFFFFF', border: '1px solid rgba(184, 134, 11, 0.2)', boxShadow: '0 4px 20px rgba(15, 23, 42, 0.05)' }}>
-              <div style={{ background: 'rgba(184, 134, 11, 0.12)', width: '48px', height: '48px', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--text-gold)', marginBottom: '1.25rem' }}>
+            <div className="glass-card" style={{ padding: '2rem', background: '#FFFFFF', border: '1px solid var(--border-gold)', boxShadow: '0 4px 20px rgba(10, 88, 202, 0.05)' }}>
+              <div style={{ background: 'rgba(10, 88, 202, 0.1)', width: '48px', height: '48px', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--brand-primary)', marginBottom: '1.25rem' }}>
                 <Clock size={24} />
               </div>
               <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.2rem', color: 'var(--text-primary)', fontWeight: 700, marginBottom: '0.5rem' }}>
@@ -205,8 +205,8 @@ export default function TechProductsPage({ setActiveView, onAddToRfq, rfqItems, 
               </p>
             </div>
 
-            <div className="glass-card" style={{ padding: '2rem', background: '#FFFFFF', border: '1px solid rgba(184, 134, 11, 0.2)', boxShadow: '0 4px 20px rgba(15, 23, 42, 0.05)' }}>
-              <div style={{ background: 'rgba(184, 134, 11, 0.12)', width: '48px', height: '48px', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--text-gold)', marginBottom: '1.25rem' }}>
+            <div className="glass-card" style={{ padding: '2rem', background: '#FFFFFF', border: '1px solid var(--border-gold)', boxShadow: '0 4px 20px rgba(10, 88, 202, 0.05)' }}>
+              <div style={{ background: 'rgba(10, 88, 202, 0.1)', width: '48px', height: '48px', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--brand-primary)', marginBottom: '1.25rem' }}>
                 <Truck size={24} />
               </div>
               <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.2rem', color: 'var(--text-primary)', fontWeight: 700, marginBottom: '0.5rem' }}>
@@ -217,8 +217,8 @@ export default function TechProductsPage({ setActiveView, onAddToRfq, rfqItems, 
               </p>
             </div>
 
-            <div className="glass-card" style={{ padding: '2rem', background: '#FFFFFF', border: '1px solid rgba(184, 134, 11, 0.2)', boxShadow: '0 4px 20px rgba(15, 23, 42, 0.05)' }}>
-              <div style={{ background: 'rgba(184, 134, 11, 0.12)', width: '48px', height: '48px', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--text-gold)', marginBottom: '1.25rem' }}>
+            <div className="glass-card" style={{ padding: '2rem', background: '#FFFFFF', border: '1px solid var(--border-gold)', boxShadow: '0 4px 20px rgba(10, 88, 202, 0.05)' }}>
+              <div style={{ background: 'rgba(10, 88, 202, 0.1)', width: '48px', height: '48px', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--brand-primary)', marginBottom: '1.25rem' }}>
                 <FileCheck size={24} />
               </div>
               <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.2rem', color: 'var(--text-primary)', fontWeight: 700, marginBottom: '0.5rem' }}>

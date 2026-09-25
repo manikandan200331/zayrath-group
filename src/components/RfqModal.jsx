@@ -55,8 +55,8 @@ export default function RfqModal({ isOpen, onClose, rfqItems, onUpdateQty, onRem
           maxHeight: '90vh',
           overflowY: 'auto',
           background: '#FFFFFF',
-          border: '1px solid rgba(184, 134, 11, 0.4)',
-          boxShadow: '0 25px 70px rgba(15, 23, 42, 0.2), 0 0 40px rgba(184, 134, 11, 0.15)',
+          border: '1px solid var(--border-gold)',
+          boxShadow: '0 25px 70px rgba(10, 88, 202, 0.16), 0 0 40px rgba(10, 88, 202, 0.1)',
           position: 'relative',
           animation: 'fadeIn 0.25s ease'
         }}
@@ -69,18 +69,18 @@ export default function RfqModal({ isOpen, onClose, rfqItems, onUpdateQty, onRem
             top: '1.25rem',
             right: '1.25rem',
             background: '#F1F5F9',
-            border: '1px solid rgba(184, 134, 11, 0.25)',
+            border: '1px solid var(--border-gold)',
             borderRadius: '50%',
             width: '36px',
             height: '36px',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            color: 'var(--text-gold)',
+            color: 'var(--brand-primary)',
             cursor: 'pointer',
             transition: 'all 0.2s'
           }}
-          onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(184, 134, 11, 0.12)'}
+          onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(10, 88, 202, 0.1)'}
           onMouseLeave={(e) => e.currentTarget.style.background = '#F1F5F9'}
         >
           <X size={18} />
@@ -94,25 +94,25 @@ export default function RfqModal({ isOpen, onClose, rfqItems, onUpdateQty, onRem
                 width: '72px',
                 height: '72px',
                 borderRadius: '50%',
-                background: 'rgba(184, 134, 11, 0.12)',
-                border: '2px solid var(--gold-primary)',
+                background: 'rgba(10, 88, 202, 0.1)',
+                border: '2px solid var(--brand-primary)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                color: 'var(--text-gold)',
+                color: 'var(--brand-primary)',
                 margin: '0 auto 1.5rem',
-                boxShadow: '0 0 30px rgba(184, 134, 11, 0.25)'
+                boxShadow: '0 0 30px rgba(10, 88, 202, 0.25)'
               }}
             >
               <CheckCircle size={38} />
             </div>
 
             <div className="badge-gold" style={{ marginBottom: '0.75rem' }}>
-              <Sparkles size={13} style={{ color: 'var(--gold-primary)' }} />
+              <Sparkles size={13} style={{ color: 'var(--brand-primary)' }} />
               <span>Inquiry Dispatched to Executive Desk</span>
             </div>
 
-            <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '2rem', color: 'var(--text-primary)', fontWeight: 800, marginBottom: '0.5rem' }}>
+            <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '2rem', color: 'var(--text-primary)', fontWeight: 800, marginBottom: '0.5rem' }}>
               Request Received Successfully
             </h3>
             
@@ -123,7 +123,7 @@ export default function RfqModal({ isOpen, onClose, rfqItems, onUpdateQty, onRem
             <div 
               style={{
                 background: '#F8FAFC',
-                border: '1.5px dashed var(--gold-primary)',
+                border: '1.5px dashed var(--brand-primary)',
                 borderRadius: '10px',
                 padding: '1.25rem',
                 display: 'inline-block',
@@ -133,7 +133,7 @@ export default function RfqModal({ isOpen, onClose, rfqItems, onUpdateQty, onRem
               <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                 Enterprise Tracking Reference
               </div>
-              <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.75rem', fontWeight: 800, color: 'var(--text-gold)', letterSpacing: '0.1em' }}>
+              <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.75rem', fontWeight: 800, color: 'var(--brand-primary)', letterSpacing: '0.1em' }}>
                 {submittedRefId}
               </div>
             </div>
@@ -154,17 +154,18 @@ export default function RfqModal({ isOpen, onClose, rfqItems, onUpdateQty, onRem
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.5rem' }}>
               <div 
                 style={{
-                  width: '36px',
-                  height: '36px',
+                  width: '38px',
+                  height: '38px',
                   borderRadius: '8px',
                   overflow: 'hidden',
-                  border: '1px solid rgba(184, 134, 11, 0.4)'
+                  border: '1.5px solid var(--border-gold)',
+                  background: '#FFFFFF'
                 }}
               >
                 <img src={logoImg} alt="Zayrath Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <div>
-                <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.6rem', color: 'var(--text-primary)', fontWeight: 800 }}>
+                <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.6rem', color: 'var(--text-primary)', fontWeight: 800 }}>
                   Enterprise Engagement Desk
                 </h3>
               </div>
@@ -179,7 +180,7 @@ export default function RfqModal({ isOpen, onClose, rfqItems, onUpdateQty, onRem
               style={{
                 display: 'flex',
                 background: '#F1F5F9',
-                border: '1px solid rgba(184, 134, 11, 0.25)',
+                border: '1px solid var(--border-gold)',
                 borderRadius: '10px',
                 padding: '0.3rem',
                 gap: '0.3rem',
@@ -240,7 +241,7 @@ export default function RfqModal({ isOpen, onClose, rfqItems, onUpdateQty, onRem
             {/* TAB 1: Selected Hardware List */}
             {activeTab === 'hardware' && (
               <div style={{ marginBottom: '1.5rem' }}>
-                <div style={{ fontSize: '0.8rem', color: 'var(--text-gold)', fontWeight: 700, textTransform: 'uppercase', marginBottom: '0.75rem' }}>
+                <div style={{ fontSize: '0.8rem', color: 'var(--brand-primary)', fontWeight: 700, textTransform: 'uppercase', marginBottom: '0.75rem' }}>
                   Selected IT Products for Quotation
                 </div>
 
@@ -248,7 +249,7 @@ export default function RfqModal({ isOpen, onClose, rfqItems, onUpdateQty, onRem
                   <div 
                     style={{
                       background: '#F8FAFC',
-                      border: '1px dashed rgba(184, 134, 11, 0.25)',
+                      border: '1px dashed var(--border-gold)',
                       borderRadius: '10px',
                       padding: '1.75rem',
                       textAlign: 'center',
@@ -268,19 +269,19 @@ export default function RfqModal({ isOpen, onClose, rfqItems, onUpdateQty, onRem
                           alignItems: 'center',
                           justifyContent: 'space-between',
                           background: '#F8FAFC',
-                          border: '1px solid rgba(184, 134, 11, 0.18)',
+                          border: '1px solid var(--border-gold)',
                           borderRadius: '8px',
                           padding: '0.65rem 1rem'
                         }}
                       >
                         <div>
                           <div style={{ color: 'var(--text-primary)', fontWeight: 700, fontSize: '0.88rem' }}>{item.name}</div>
-                          <div style={{ color: 'var(--text-gold)', fontSize: '0.78rem', fontWeight: 600 }}>{item.priceEstimate} est.</div>
+                          <div style={{ color: 'var(--brand-primary)', fontSize: '0.78rem', fontWeight: 600 }}>{item.priceEstimate} est.</div>
                         </div>
 
                         <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                           {/* Qty Stepper */}
-                          <div style={{ display: 'flex', alignItems: 'center', background: '#FFFFFF', border: '1px solid rgba(184, 134, 11, 0.25)', borderRadius: '6px', overflow: 'hidden' }}>
+                          <div style={{ display: 'flex', alignItems: 'center', background: '#FFFFFF', border: '1px solid var(--border-gold)', borderRadius: '6px', overflow: 'hidden' }}>
                             <button
                               type="button"
                               onClick={() => onUpdateQty(item.id, Math.max(1, item.qty - 1))}
@@ -288,7 +289,7 @@ export default function RfqModal({ isOpen, onClose, rfqItems, onUpdateQty, onRem
                             >
                               <Minus size={12} />
                             </button>
-                            <span style={{ fontSize: '0.85rem', fontWeight: 700, padding: '0 0.5rem', color: 'var(--text-gold)' }}>
+                            <span style={{ fontSize: '0.85rem', fontWeight: 700, padding: '0 0.5rem', color: 'var(--brand-primary)' }}>
                               {item.qty}
                             </span>
                             <button
@@ -324,7 +325,7 @@ export default function RfqModal({ isOpen, onClose, rfqItems, onUpdateQty, onRem
                     Full Name / Designation *
                   </label>
                   <div style={{ position: 'relative' }}>
-                    <User size={15} style={{ position: 'absolute', left: '0.85rem', top: '50%', transform: 'translateY(-50%)', color: 'var(--gold-primary)' }} />
+                    <User size={15} style={{ position: 'absolute', left: '0.85rem', top: '50%', transform: 'translateY(-50%)', color: 'var(--brand-primary)' }} />
                     <input 
                       type="text" 
                       required
@@ -335,7 +336,7 @@ export default function RfqModal({ isOpen, onClose, rfqItems, onUpdateQty, onRem
                         width: '100%',
                         padding: '0.75rem 0.85rem 0.75rem 2.4rem',
                         background: '#FFFFFF',
-                        border: '1px solid rgba(184, 134, 11, 0.3)',
+                        border: '1px solid var(--border-gold)',
                         borderRadius: '8px',
                         color: 'var(--text-primary)',
                         fontSize: '0.88rem',
@@ -351,7 +352,7 @@ export default function RfqModal({ isOpen, onClose, rfqItems, onUpdateQty, onRem
                     Enterprise / Company Name *
                   </label>
                   <div style={{ position: 'relative' }}>
-                    <Building size={15} style={{ position: 'absolute', left: '0.85rem', top: '50%', transform: 'translateY(-50%)', color: 'var(--gold-primary)' }} />
+                    <Building size={15} style={{ position: 'absolute', left: '0.85rem', top: '50%', transform: 'translateY(-50%)', color: 'var(--brand-primary)' }} />
                     <input 
                       type="text" 
                       required
@@ -362,7 +363,7 @@ export default function RfqModal({ isOpen, onClose, rfqItems, onUpdateQty, onRem
                         width: '100%',
                         padding: '0.75rem 0.85rem 0.75rem 2.4rem',
                         background: '#FFFFFF',
-                        border: '1px solid rgba(184, 134, 11, 0.3)',
+                        border: '1px solid var(--border-gold)',
                         borderRadius: '8px',
                         color: 'var(--text-primary)',
                         fontSize: '0.88rem',
@@ -380,7 +381,7 @@ export default function RfqModal({ isOpen, onClose, rfqItems, onUpdateQty, onRem
                     Corporate Email Address *
                   </label>
                   <div style={{ position: 'relative' }}>
-                    <Mail size={15} style={{ position: 'absolute', left: '0.85rem', top: '50%', transform: 'translateY(-50%)', color: 'var(--gold-primary)' }} />
+                    <Mail size={15} style={{ position: 'absolute', left: '0.85rem', top: '50%', transform: 'translateY(-50%)', color: 'var(--brand-primary)' }} />
                     <input 
                       type="email" 
                       required
@@ -391,7 +392,7 @@ export default function RfqModal({ isOpen, onClose, rfqItems, onUpdateQty, onRem
                         width: '100%',
                         padding: '0.75rem 0.85rem 0.75rem 2.4rem',
                         background: '#FFFFFF',
-                        border: '1px solid rgba(184, 134, 11, 0.3)',
+                        border: '1px solid var(--border-gold)',
                         borderRadius: '8px',
                         color: 'var(--text-primary)',
                         fontSize: '0.88rem',
@@ -407,7 +408,7 @@ export default function RfqModal({ isOpen, onClose, rfqItems, onUpdateQty, onRem
                     Direct Phone / WhatsApp *
                   </label>
                   <div style={{ position: 'relative' }}>
-                    <Phone size={15} style={{ position: 'absolute', left: '0.85rem', top: '50%', transform: 'translateY(-50%)', color: 'var(--gold-primary)' }} />
+                    <Phone size={15} style={{ position: 'absolute', left: '0.85rem', top: '50%', transform: 'translateY(-50%)', color: 'var(--brand-primary)' }} />
                     <input 
                       type="tel" 
                       required
@@ -418,7 +419,7 @@ export default function RfqModal({ isOpen, onClose, rfqItems, onUpdateQty, onRem
                         width: '100%',
                         padding: '0.75rem 0.85rem 0.75rem 2.4rem',
                         background: '#FFFFFF',
-                        border: '1px solid rgba(184, 134, 11, 0.3)',
+                        border: '1px solid var(--border-gold)',
                         borderRadius: '8px',
                         color: 'var(--text-primary)',
                         fontSize: '0.88rem',
@@ -444,7 +445,7 @@ export default function RfqModal({ isOpen, onClose, rfqItems, onUpdateQty, onRem
                     width: '100%',
                     padding: '0.75rem',
                     background: '#FFFFFF',
-                    border: '1px solid rgba(184, 134, 11, 0.3)',
+                    border: '1px solid var(--border-gold)',
                     borderRadius: '8px',
                     color: 'var(--text-primary)',
                     fontSize: '0.88rem',
@@ -462,13 +463,13 @@ export default function RfqModal({ isOpen, onClose, rfqItems, onUpdateQty, onRem
                     type="checkbox" 
                     checked={formData.ndaRequired} 
                     onChange={(e) => setFormData({ ...formData, ndaRequired: e.target.checked })}
-                    style={{ accentColor: 'var(--gold-primary)' }}
+                    style={{ accentColor: 'var(--brand-primary)' }}
                   />
                   <span>Require Mutual Non-Disclosure Agreement (NDA)</span>
                 </label>
 
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', fontSize: '0.78rem', color: 'var(--text-gold)', fontWeight: 600 }}>
-                  <ShieldCheck size={14} style={{ color: 'var(--gold-primary)' }} />
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', fontSize: '0.78rem', color: 'var(--brand-primary)', fontWeight: 600 }}>
+                  <ShieldCheck size={14} style={{ color: 'var(--brand-primary)' }} />
                   <span>256-Bit Encrypted Transmission</span>
                 </div>
               </div>

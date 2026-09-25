@@ -20,25 +20,25 @@ export default function GoldParticleBackground() {
 
     window.addEventListener('resize', handleResize);
 
-    // Particle parameters
-    const particleCount = Math.min(Math.floor((width * height) / 18000), 75);
+    // Particle parameters matching Global Globe & Stardust Theme
+    const particleCount = Math.min(Math.floor((width * height) / 17000), 75);
     const particles = [];
 
-    const goldColors = [
-      'rgba(184, 134, 11, ',    // Primary deep gold
-      'rgba(202, 138, 4, ',     // Amber gold
-      'rgba(161, 98, 7, ',      // Dark bronze gold
-      'rgba(217, 119, 6, '      // Warm orange-gold
+    const sapphireThemeColors = [
+      'rgba(10, 88, 202, ',    // Royal Sapphire Blue
+      'rgba(2, 132, 199, ',    // Electric Cyan Accent
+      'rgba(0, 45, 98, ',      // Deep Midnight Sapphire
+      'rgba(148, 163, 184, '   // Metallic Platinum Chrome
     ];
 
     for (let i = 0; i < particleCount; i++) {
       particles.push({
         x: Math.random() * width,
         y: Math.random() * height,
-        radius: Math.random() * 2 + 0.8,
-        vx: (Math.random() - 0.5) * 0.4,
-        vy: (Math.random() - 0.5) * 0.4,
-        colorBase: goldColors[Math.floor(Math.random() * goldColors.length)],
+        radius: Math.random() * 2.2 + 0.8,
+        vx: (Math.random() - 0.5) * 0.35,
+        vy: (Math.random() - 0.5) * 0.35,
+        colorBase: sapphireThemeColors[Math.floor(Math.random() * sapphireThemeColors.length)],
         alpha: Math.random() * 0.5 + 0.3,
         pulseSpeed: Math.random() * 0.02 + 0.005,
         pulseVal: Math.random() * Math.PI
@@ -80,24 +80,24 @@ export default function GoldParticleBackground() {
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
         ctx.fillStyle = `${p.colorBase}${clampedAlpha})`;
-        ctx.shadowBlur = 6;
-        ctx.shadowColor = 'rgba(184, 134, 11, 0.35)';
+        ctx.shadowBlur = 8;
+        ctx.shadowColor = 'rgba(2, 132, 199, 0.4)';
         ctx.fill();
 
-        // Connect nearby particles with subtle golden threads
+        // Connect nearby particles with subtle sapphire orbital threads
         for (let j = i + 1; j < particles.length; j++) {
           const p2 = particles[j];
           const dx = p.x - p2.x;
           const dy = p.y - p2.y;
           const dist = Math.sqrt(dx * dx + dy * dy);
 
-          if (dist < 110) {
+          if (dist < 115) {
             ctx.beginPath();
             ctx.moveTo(p.x, p.y);
             ctx.lineTo(p2.x, p2.y);
-            const lineAlpha = (1 - dist / 110) * 0.22;
-            ctx.strokeStyle = `rgba(184, 134, 11, ${lineAlpha})`;
-            ctx.lineWidth = 0.65;
+            const lineAlpha = (1 - dist / 115) * 0.22;
+            ctx.strokeStyle = `rgba(10, 88, 202, ${lineAlpha})`;
+            ctx.lineWidth = 0.7;
             ctx.stroke();
           }
         }
@@ -106,13 +106,13 @@ export default function GoldParticleBackground() {
         const mdx = p.x - mouseX;
         const mdy = p.y - mouseY;
         const mDist = Math.sqrt(mdx * mdx + mdy * mdy);
-        if (mDist < 140) {
+        if (mDist < 145) {
           ctx.beginPath();
           ctx.moveTo(p.x, p.y);
           ctx.lineTo(mouseX, mouseY);
-          const mAlpha = (1 - mDist / 140) * 0.35;
-          ctx.strokeStyle = `rgba(202, 138, 4, ${mAlpha})`;
-          ctx.lineWidth = 0.85;
+          const mAlpha = (1 - mDist / 145) * 0.38;
+          ctx.strokeStyle = `rgba(2, 132, 199, ${mAlpha})`;
+          ctx.lineWidth = 0.9;
           ctx.stroke();
         }
       }
